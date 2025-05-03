@@ -1,0 +1,262 @@
+/* ================================== */
+/* Homepage Sections                  */
+/* ================================== */
+
+/* Hero Section Styles (Homepage)   */
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background-image: url('/Users/steve/git/code/busy/images/client Gail.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  border-radius: 0;
+}
+
+/* Overlay for darkening the background image */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the 0.5 for more/less darkness */
+  z-index: 0; /* Sits behind the content */
+}
+
+/* Container for the hero content */
+.hero-content {
+  position: relative; /* Must be relative to sit above the overlay */
+  z-index: 1; /* Ensure content is above the overlay */
+}
+
+/* Heading styles */
+.hero-content h1 {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  color: #fff; /* Ensure text is white for contrast */
+}
+
+/* Paragraph styles */
+.hero-content p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  color: #fff; /* Ensure text is white for contrast */
+}
+
+.hero-content p:last-of-type {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  margin-bottom: 15px;
+  color: #00FF00; /* Highlighted color for last paragraph */
+  font-size: 14px;
+}
+
+/* About Section Styles (Homepage)   */
+.about-home-section {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  gap: 40px; /* Space between text and image */
+}
+
+.about-content {
+  flex: 1; /* Allow text content to take available space */
+}
+
+.about-image {
+  flex-basis: 300px; /* Set a base width for the image container */
+  flex-shrink: 0; /* Prevent image container from shrinking */
+  text-align: center; /* Center image if it's smaller than container */
+}
+
+.about-image img {
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make the image circular */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Service Section Styles (Homepage) */
+.services-section {
+  background-color: #f9f9f9; /* Light background for the section */
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.services-section h2 {
+  color: #333; /* Darker heading color */
+  margin-bottom: 40px;
+  font-size: 2.2em;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center; /* Align cards to the center */
+  gap: 30px; /* Space between cards */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  padding-bottom: 15px; /* Space for scrollbar */
+  max-width: 1100px; /* Match other sections */
+  margin: 0 auto; /* Center the container */
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+.service-card {
+  background: #fff;
+  padding: 35px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  flex-shrink: 0; /* Prevent shrinking */
+  min-width: 250px; /* Add a min-width to prevent extreme squishing */
+  width: 250px; /* Set a fixed width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content vertically */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.service-icon {
+  /* Styles already applied inline, but can be centralized here if needed */
+  /* Example: color: #ff5722; */
+  margin-bottom: 20px; /* Increased space below icon */
+}
+
+.service-card h3 {
+  color: #333;
+  font-size: 1.4em;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #555; /* Slightly lighter text color */
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 25px; /* Space before the button */
+  flex-grow: 1; /* Allow paragraph to take available space */
+}
+
+.service-button {
+  display: inline-block;
+  background: #fff;
+  color: #ff5722; /* Orange text */
+  border: 2px solid #ff5722; /* Orange border */
+  padding: 10px 25px;
+  border-radius: 50px; /* Fully rounded */
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: auto; /* Push button to the bottom */
+}
+
+.service-button:hover {
+  background: #ff5722; /* Orange background on hover */
+  color: #fff; /* White text on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
+}
+
+/* No specific responsive layout changes needed for service cards anymore */
+
+/* ================================== */
+/* Why Train with Us Section Styles  */
+/* ================================== */
+#why {
+  position: relative; /* Needed for absolute positioning of the background image */
+  overflow: hidden; /* Hide overflowing parts of the image */
+}
+
+.why-background-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%; /* 50% of the section width */
+  height: 9.375%; /* Approximately 25% of the section height */
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url('../images/healthy woman on phone.webp'); /* Add gradient overlay */
+  background-size: 50% 100%, cover; /* Apply gradient to the left 50%, cover for the image */
+  background-position: top left, top right; /* Position gradient on the left, image on the right */
+  background-repeat: no-repeat;
+  z-index: 1; /* Ensure it's behind the text */
+}
+
+/* Responsive adjustments for Why Train with Us section */
+@media (min-width: 769px) {
+  .why-background-image {
+    height: 18.75%; /* Double the height for desktop */
+    background-size: 50% 100%, cover; /* Restore cover for image size */
+    background-position: top left, top 20% right; /* Adjust image position for desktop */
+  }
+}
+
+/* ================================== */
+/* Testimonials Section Styles       */
+/* ================================== */
+
+.testimonials-section {
+  background-color: #fff; /* White background for contrast */
+  padding: 60px 30px; /* Added side padding like other sections */
+  overflow: hidden; /* Ensure parent doesn't clip */
+  max-width: 1100px; /* Added max-width like other sections */
+  margin: 40px auto; /* Added margin auto like other sections */
+}
+
+.testimonials-section h2 {
+  text-align: center;
+  color: #333; /* Darker heading */
+  margin-bottom: 40px;
+  font-size: 2.2em;
+}
+
+.testimonial-scroll-container {
+  display: flex;
+  flex-wrap: nowrap; /* Explicitly prevent wrapping */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 20px 30px; /* Padding for the cards inside */
+  gap: 25px; /* Space between testimonial cards */
+  min-width: min-content; /* Ensure container is wide enough for content */
+  /* Hide scrollbar visually */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.testimonial-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.testimonial-card {
+  flex: 0 0 auto; /* Prevent cards from shrinking */
+  width: 300px; /* Fixed width for each card */
+  background: #f9f9f9; /* Light background for cards */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  scroll-snap-align: start; /* Snap alignment */
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 15px;
+  flex-grow: 1; /* Allow text to take space */
+  line-height: 1.5;
+}
+
+.testimonial-card cite {
+  font-weight: 600;
+  color: #ff5722; /* Orange accent for name */
+  text-align: right;
+  margin-top: auto; /* Push citation to bottom */
+}

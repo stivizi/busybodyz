@@ -1,0 +1,233 @@
+/* ================================== */
+/* Responsive Styles                  */
+/* ================================== */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .benefit {
+    max-height: 150px; /* Reduced height for mobile */
+    padding: 10px; /* Reduced padding for mobile */
+  }
+
+  header {
+    height: auto;
+    padding: 80px 20px;
+  }
+  header h1 {
+    font-size: 2.2em;
+  }
+  .cta-button {
+    margin: 20px auto;
+  }
+  .benefits {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Responsive content section */
+  .section-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .content-block {
+    padding: 20px;
+  }
+  
+  .cta-section {
+    padding: 20px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .secondary-button {
+    width: auto;
+    padding: 12px 12px;
+    margin-top: 10px;
+  }
+  
+  /* Mobile dropdown menu */
+  .dropdown {
+    width: 100%;
+  }
+  
+  .dropdown-content {
+    position: static;
+    width: 100%;
+    transform: none;
+    box-shadow: none;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    margin: 5px 0;
+    padding: 5px 0;
+  }
+  
+  .dropdown-content a {
+    padding-left: 20px;
+    font-size: 0.9em;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: none; /* Don't show on hover for mobile */
+  }
+  
+  /* Show dropdown content when Services is clicked */
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+
+  /* Hide menu by default on mobile */
+  #menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 12px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    z-index: 100;
+    min-width: 180px;
+  }
+
+#menu a {
+    color: #222;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 12px 16px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+  }
+
+#menu .dropdown-content a {
+    padding-left: 32px;
+    font-size: 0.95em;
+    color: #666;
+  }
+
+  #menu a:hover,
+  #menu a:focus,
+  #menu a:active {
+    background: #dcdcdc; /* even darker for tap feedback */
+    color: #000;
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive adjustments for Header */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Stack items vertically on mobile */
+    text-align: center; /* Center text on mobile */
+    height: auto; /* Allow height to adjust */
+    padding: 40px 20px; /* Adjust padding for mobile */
+  }
+
+  .header-content {
+    text-align: center; /* Center text within the content div */
+    padding-right: 0; /* Remove right padding on mobile */
+    margin-bottom: 20px; /* Add space below text content */
+  }
+
+  .header-background-image {
+    height: auto; /* Allow height to adjust based on width */
+    max-width: 80%; /* Limit image width on mobile */
+    margin-top: 20px; /* Add space above the image */
+  }
+
+  header h1 {
+    font-size: 2em; /* Adjust font size for mobile */
+  }
+
+  header p {
+    font-size: 1em; /* Adjust font size for mobile */
+  }
+}
+
+
+/* ================================== */
+/* About Section Styles (Homepage)   */
+/* ================================== */
+
+.about-home-section {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  text-align: center; /* Center text on mobile */
+  gap: 30px; /* Adjust gap for vertical layout */
+}
+
+.about-image {
+  flex-basis: auto; /* Reset basis */
+  width: 200px; /* Control image size on mobile */
+  margin: 0 auto; /* Center image container */
+}
+
+.about-content p:last-of-type { /* Center the button */
+  text-align: center;
+}
+
+/* Adjust service cards for horizontal scrolling on mobile */
+.service-cards {
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Enable horizontal scroll */
+  padding-bottom: 15px; /* Space for scrollbar */
+  justify-content: flex-start; /* Align items to the start for scrolling */
+}
+/* Remove mobile-specific width/basis overrides for service-card */
+/* Let desktop styles (width: 250px, flex-shrink: 0) apply */
+/* .service-card { ... } */ /* This block is removed/commented out */
+
+/* Responsive adjustments for testimonials */
+.testimonials-section h2 {
+  font-size: 1.8em;
+}
+.testimonial-scroll-container {
+  padding: 0 15px; /* Adjusted padding for left/right spacing */
+  gap: 30px; /* Matched gap with service cards */
+  display: flex;
+  flex-wrap: nowrap; /* Ensure no wrapping on mobile */
+  overflow-x: auto; /* Enable horizontal scroll */
+  -webkit-overflow-scrolling: touch; /* Add for smoother scrolling on iOS */
+  white-space: nowrap; /* Ensure items stay in a single line */
+  justify-content: flex-start; /* Align items to the start for scrolling */
+}
+.testimonial-card {
+  width: 250px; /* Adjusted fixed width for horizontal scrolling */
+  flex: 0 0 auto; /* Ensure card doesn't shrink */
+  padding: 15px 25px; /* Adjusted vertical padding */
+}
+
+.testimonial-card p {
+  font-size: 0.9em; /* Reduced font size for mobile */
+  line-height: 1.4; /* Reduced line height for mobile */
+}
+
+.testimonials-section {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 768px) {
+.booking-container {
+  padding: 10px;
+}
+}
+
+/* Responsive adjustments for Why Train with Us section */
+@media (min-width: 769px) {
+  .why-background-image {
+    height: 18.75%; /* Double the height for desktop */
+    background-size: 50% 100%, cover; /* Restore cover for image size */
+    background-position: top left, top 20% right; /* Adjust image position for desktop */
+  }
+}

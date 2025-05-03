@@ -1,0 +1,26 @@
+/* ================================== */
+/* General Styles                     */
+/* ================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #222;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+/* Headings with accent color */
+h2 {
+  color: #007bff;
+  margin-top: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative; /* Needed to bring the title above the image */
+  z-index: 2; /* Ensure the title is above the background image */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Add subtle text shadow for readability */
+  margin-left: 5%; /* Adjust left margin to position within negative space */
+}

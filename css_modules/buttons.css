@@ -1,0 +1,79 @@
+/* ================================== */
+/* Buttons                            */
+/* ================================== */
+
+/* Call-to-action button with subtle hover */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #007bff;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,86,179,0.4);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #ff5722;
+  border: 2px solid #ff5722;
+  padding: 8px 8px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+  background: #f0f7ff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,123,255,0.2);
+}
+
+.service-button {
+  display: inline-block;
+  background: #fff;
+  color: #ff5722; /* Orange text */
+  border: 2px solid #ff5722; /* Orange border */
+  padding: 10px 25px;
+  border-radius: 50px; /* Fully rounded */
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: auto; /* Push button to the bottom */
+}
+
+.service-button:hover {
+  background: #ff5722; /* Orange background on hover */
+  color: #fff; /* White text on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
+}
+
+.script-button {
+  margin: 5px;
+}

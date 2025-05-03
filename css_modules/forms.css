@@ -1,0 +1,113 @@
+/* ================================== */
+/* Forms                              */
+/* ================================== */
+
+/* Styles extracted from inline styles in booking.html */
+.booking-form select#experience {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.booking-form {
+  margin-top: 20px;
+  display: none;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Styles extracted from inline styles in hybrid-coaching.html */
+#contact-form {
+  display: none;
+  margin-top: 15px;
+}
+
+#contact-form input[type="text"] {
+  padding: 8px;
+  width: 100%;
+  margin: 5px 0;
+}
+
+#contact-form > div { /* Targeting the div with display:flex, gap, and margin */
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+#contact-form span {
+  align-self: center;
+}
+
+#contact-form input[type="email"],
+#contact-form input[type="tel"] {
+  padding: 8px;
+  flex: 1;
+}
+
+/* Styles extracted from inline styles in online-coaching.html */
+#booking-date {
+  padding: 8px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.contact-form {
+  display: none;
+  margin-top: 15px;
+}
+
+.contact-form input[type="text"] {
+  padding: 8px;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.contact-form > div {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="tel"] {
+  padding: 8px;
+  flex: 1;
+}
+
+.contact-form span {
+  align-self: center;
+}
+
+.calendar-booking-modal .cta-button {
+  margin: 10px;
+}
+
+.calendar-booking-modal .calendar-close-button {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: #ff5722;
+  font-weight: bold;
+  cursor: pointer;
+}

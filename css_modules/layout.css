@@ -1,0 +1,39 @@
+/* ================================== */
+/* Layout and Structure               */
+/* ================================== */
+
+/* Sections styled as modern cards */
+section {
+  padding: 50px 30px;
+  max-width: 1366px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Added align class for consistent structure */
+.align {
+  max-width: 100%; /* Or your desired max width */
+  margin: 0 auto;
+  padding: 0 20px; /* Add some padding on the sides */
+}
+
+/* Added styles for the inner content divs */
+.problem-content,
+.solution-content,
+.imagine-content,
+.why-content,
+.difference-content,
+.about-home-content,
+.services-overview-content,
+.testimonials-content,
+.quiz-content {
+  /* Add any specific styles for these content containers if needed */
+}

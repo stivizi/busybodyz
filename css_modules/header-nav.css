@@ -1,0 +1,166 @@
+/* ================================== */
+/* Header and Navigation              */
+/* ================================== */
+
+/* Existing header styles */
+header {
+  color: #fff;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(245, 247, 250, 0)); /* Blend with body background */
+  z-index: 1; /* Ensure gradient is above images */
+}
+
+/* Styles extracted from inline styles in index.html */
+.branding-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin: 20px 0;
+  position: relative;
+}
+
+.branding-header > div:first-child { /* Targeting the first inner div */
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+}
+
+.branding-header img {
+  height: 50px;
+  width: auto;
+  margin-right: 15px;
+}
+
+.branding-header > div:nth-child(1) > div:nth-child(2) { /* Targeting the vertical line div */
+  width: 1px;
+  height: 50px;
+  background-color: #000;
+  margin-right: 15px;
+}
+
+.branding-header > div:nth-child(1) > div:nth-child(3) { /* Targeting the div with h1 and h3 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.branding-header h1 {
+  margin: 2px 0;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.branding-header h3 {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.branding-header > div:last-child { /* Targeting the last inner div */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.branding-header a[href="booking.html"] { /* Targeting the booking link */
+  margin-left: auto;
+  font-size: 10px;
+  padding: 4px 8px;
+  border: 1px solid #ff5722;
+  background: white;
+  color: #ff5722;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  height: auto;
+}
+
+#menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.site-header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+.header-logo-container {
+  margin-right: auto;
+}
+
+.header-logo-container img {
+    max-height: 100px;
+  }
+
+
+/* Dropdown menu styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 180px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  z-index: 1000;
+  padding: 8px 0;
+  margin-top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown-content a {
+  color: #222;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 0.95em;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #007bff;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #007bff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+main {
+    width: 100%;
+}

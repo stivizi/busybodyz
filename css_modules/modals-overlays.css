@@ -1,0 +1,144 @@
+/* ================================== */
+/* Modals and Overlays                */
+/* ================================== */
+
+#calendar-booking {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+#calendar-booking > div { /* Targeting the inner div of the modal */
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#calendar-booking > div > div:first-of-type { /* Targeting the div with view buttons */
+  margin-bottom: 15px;
+}
+
+#calendar-booking button.cta-button { /* Targeting the view buttons */
+  margin: 5px;
+}
+
+#full-calendar {
+  max-width: 100%;
+  margin: auto;
+}
+
+#calendar-booking button[onclick*="calendar-booking"] { /* Targeting the close button */
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: #ff5722;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Styles extracted from inline styles in hybrid-coaching.html */
+#calendar-booking.hybrid-coaching-modal { /* Added a class for this specific modal */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+#calendar-booking.hybrid-coaching-modal > div { /* Targeting the inner div of the modal */
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles extracted from inline styles in online-coaching.html */
+#calendar-booking.online-coaching-modal { /* Added a class for this specific modal */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+#calendar-booking.online-coaching-modal > div { /* Targeting the inner div of the modal */
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.calendar-booking-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-booking-modal > div {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.calendar-booking-modal input[type="date"] {
+  padding: 8px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.calendar-booking-modal .time-slots {
+  margin-top: 15px;
+}
+
+.calendar-booking-modal .cta-button {
+  margin: 10px;
+}
+
+.calendar-booking-modal .calendar-close-button {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: #ff5722;
+  font-weight: bold;
+  cursor: pointer;
+}

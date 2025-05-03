@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BusyBodyz - Reset Your Energy</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css_modules/general.css">
+<link rel="stylesheet" href="css_modules/layout.css">
+<link rel="stylesheet" href="css_modules/header-nav.css">
+<link rel="stylesheet" href="css_modules/buttons.css">
+<link rel="stylesheet" href="css_modules/homepage-sections.css">
+<link rel="stylesheet" href="css_modules/page-specific.css">
+<link rel="stylesheet" href="css_modules/components.css">
+<link rel="stylesheet" href="css_modules/modals-overlays.css">
+<link rel="stylesheet" href="css_modules/forms.css">
+<link rel="stylesheet" href="css_modules/utility.css">
+<link rel="stylesheet" href="css_modules/responsive.css">
+<!-- Lordicon animated icons -->
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
+</head>
+<body>
+
+    <header>
+      <main>
+        <div class="site-header-content">
+          <div class="header-logo-container">
+            <img
+              src="https://static.wixstatic.com/media/5ccc19_5312822ae08e485b8be8a3e3c572dca8~mv2.png"
+              alt="BusyBodyz Icon"
+            />
+          </div>
+          <nav aria-label="Main navigation">
+            <a href="index.html" aria-current="page" class="site-header__nav-link">Home</a>
+            <a href="about.html" class="site-header__nav-link">About</a>
+          </nav>
+        </div>
+      </main>
+    </header>
+
+<main>
+  <section id="quiz">
+    <article>
+      <div class="align">
+        <div id="countdown-offer" class="countdown-offer">
+          Limited Time Offer: Free Personalized Plan ends in <span id="countdown-timer">24:00:00</span>
+        </div>
+        <div id="quiz-container"></div>
+        <div id="progress-container" class="progress-container">
+          <div id="progress-bar" class="progress-bar">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+          <p id="progress-text" class="progress-text">Question 1 of 20</p>
+        </div>
+        <div class="quiz-buttons">
+          <button id="prev-btn" class="secondary-button quiz-nav-button">Back</button>
+          <button id="next-btn" class="secondary-button quiz-nav-button">Next</button>
+          <button id="submit-btn" class="secondary-button quiz-submit-button">Submit</button>
+        </div>
+        <div id="result" class="quiz-result">
+          <div class="quiz-result-header">
+            <h3 class="quiz-result-heading">Congratulations!</h3>
+            <p>You've completed the quiz. Check your email for your personalized Energy Reset Plan and a special bonus!</p>
+          </div>
+          
+          <!-- The quiz summary will be inserted here by JavaScript -->
+          
+          <div class="quiz-share-section">
+            <p><strong>Share with friends to unlock an extra bonus guide!</strong></p>
+            <div class="quiz-share-buttons">
+              <a href="#" class="secondary-button quiz-share-button">Share on Facebook</a>
+              <a href="#" class="secondary-button quiz-share-button">Share on Twitter</a>
+              <a href="#" class="secondary-button quiz-share-button">Copy Link</a>
+            </div>
+          </div>
+        </div>
+        <script src="scripts/quiz-logic.js"></script>
+      </div>
+    </article>
+  </section>
+</main>
+
+
+<footer>
+  <p>&copy; 2025 BusyBodyz. All rights reserved.</p>
+</footer>
+
+<div id="social-proof" class="social-proof">
+  <!-- Message will appear here -->
+</div>
+
+<script src="scripts/social-proof.js"></script>
+
+<div id="exit-popup" class="exit-popup">
+  <div class="exit-popup-content">
+    <h3>Wait! Before you go...</h3>
+    <p>Grab your <strong>Free Energy Reset Checklist</strong> to kickstart your journey!</p>
+    <a href="#" class="secondary-button exit-popup-button">Get My Free Checklist</a>
+    <br>
+    <button id="close-exit-popup" class="close-exit-popup-button">No thanks</button>
+  </div>
+</div>
+
+<script src="scripts/exit-popup.js"></script>
+
+</body>
+</html>

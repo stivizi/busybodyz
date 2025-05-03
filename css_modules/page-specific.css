@@ -1,0 +1,298 @@
+/* ================================== */
+/* Page Specific Styles               */
+/* ================================== */
+
+/* Quiz intro container styling */
+.quiz-intro {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Page-specific header backgrounds */
+.page-self-led header {
+  /* Use the specific client image for this page */
+  background: url('../images/client Gail.jpg?v=3') no-repeat center center;
+  background-size: cover;
+}
+
+/* Styles extracted from inline styles in booking.html */
+.booking-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.calendar-container {
+  margin-top: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.time-slots {
+  margin-top: 20px;
+  display: none;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.time-slot-button {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.time-slot-button:hover {
+  background: #f0f0f0;
+  border-color: #ccc;
+}
+
+.time-slot-button.selected {
+  background: #ff5722;
+  color: white;
+  border-color: #ff5722;
+}
+
+.booking-form {
+  margin-top: 20px;
+  display: none;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.booking-form select#experience {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.booking-summary {
+  margin-top: 20px;
+  background: #f0f7ff;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #ff5722;
+}
+
+#booking-confirmation {
+  display: none;
+  margin-top: 30px;
+  text-align: center;
+}
+
+#booking-confirmation lord-icon {
+  width: 120px;
+  height: 120px;
+}
+
+#booking-confirmation a.secondary-button {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.fc-event {
+  cursor: pointer;
+}
+
+.fc .fc-button-primary {
+  background-color: #ff5722;
+  border-color: #ff5722;
+}
+
+.fc .fc-button-primary:hover {
+  background-color: #e64a19;
+  border-color: #e64a19;
+}
+
+.fc .fc-button-primary:disabled {
+  background-color: #ff8a65;
+  border-color: #ff8a65;
+}
+
+.fc-day-today {
+  background-color: rgba(255, 87, 34, 0.1) !important;
+}
+
+/* Styles extracted from inline styles in hybrid-coaching.html */
+header.hybrid-coaching-header { /* Added a class for this specific header */
+  position: relative;
+  background: none;
+}
+
+.header-icon-container { /* New class for the div with margin-top */
+  margin-top: 10px;
+}
+
+.header-icon-container lord-icon {
+  width: 60px;
+  height: 60px;
+}
+
+#calendar-booking.hybrid-coaching-modal { /* Added a class for this specific modal */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+#calendar-booking.hybrid-coaching-modal > div { /* Targeting the inner div of the modal */
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#booking-date {
+  padding: 8px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#contact-form {
+  display: none;
+  margin-top: 15px;
+}
+
+#contact-form input[type="text"] {
+  padding: 8px;
+  width: 100%;
+  margin: 5px 0;
+}
+
+#contact-form > div { /* Targeting the div with display:flex, gap, and margin */
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+#contact-form span {
+  align-self: center;
+}
+
+#contact-form input[type="email"],
+#contact-form input[type="tel"] {
+  padding: 8px;
+  flex: 1;
+}
+
+/* Styles extracted from inline styles in online-coaching.html */
+header.online-coaching-header { /* Added a class for this specific header */
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80') no-repeat center center;
+  background-size: cover;
+  padding: 30px 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+header.online-coaching-header > div:first-child { /* Targeting the inner div with background-color, padding, etc. */
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+header.online-coaching-header .header-icon-container { /* Targeting the div with margin-top inside the header */
+  margin-top: 10px;
+}
+
+header.online-coaching-header .header-icon-container lord-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.pricing-table-container.overflow-max-width { /* Added a class for the pricing table container */
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.pricing-table table.width-min-font { /* Added a class for the pricing table */
+  width: 100%;
+  min-width: 280px;
+  font-size: calc(12px + 0.5vw);
+}
+
+.pricing-table th.padding-8px-4px,
+.pricing-table td.padding-8px-4px { /* Added a class for table headers and data cells */
+  padding: 8px 4px;
+}
+
+.pricing-table td a.plan-link { /* Added a class for the plan links in the table */
+  text-decoration: none;
+  color: white;
+  background-color: #ff5722;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.margin-top-20px-text-align-center { /* New class for the paragraph with margin-top and text-align */
+  margin-top: 20px;
+  text-align: center;
+}
+
+#calendar-booking.online-coaching-modal { /* Added a class for this specific modal */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+#calendar-booking.online-coaching-modal > div { /* Targeting the inner div of the modal */
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
