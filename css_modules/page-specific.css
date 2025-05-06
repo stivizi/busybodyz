@@ -16,7 +16,7 @@
 /* Page-specific header backgrounds */
 .page-self-led header {
   /* Use the specific client image for this page */
-  background: url('../images/client Gail.jpg?v=3') no-repeat center center;
+  background: url('gail.jpg') no-repeat center center;
   background-size: cover;
 }
 
