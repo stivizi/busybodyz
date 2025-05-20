@@ -1,3 +1,8 @@
+:root {
+  --section-bg: #efefef;
+  --alternate-section-bg: #c5c5c5;
+}
+
 /* ================================== */
 /* Homepage Sections                  */
 /* ================================== */
@@ -5,20 +10,18 @@
 /* Hero Section Styles (Homepage)   */
 
 .hero-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: block; /* Changed to block */
+  /* Removed flex properties */
   height: 70vh;
   position: relative;
   overflow: hidden;
-  text-align: center;
+  text-align: center; /* Keep text centered */
   background-image: url('images/gail.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto; /* Added margin auto for centering */
   padding: 0;
   max-width: none;
   border-radius: 0;
@@ -27,7 +30,7 @@
 /* Overlay for darkening the background image */
 .hero-section::before {
   content: "";
-  position: absolute;
+  position:relative;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0, 0, 0, 0.5); /* Adjust the 0.5 for more/less darkness */
   z-index: 0; /* Sits behind the content */
@@ -42,7 +45,8 @@
 /* Heading styles */
 .hero-content h1 {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-  color: #fff; /* Ensure text is white for contrast */
+  color: #007bff; /* Ensure text is white for contrast */
+  font-size: 3em;
 }
 
 /* Paragraph styles */
@@ -60,18 +64,19 @@
 
 /* About Section Styles (Homepage)   */
 .about-home-section {
-  display: flex;
-  align-items: center; /* Vertically center items */
-  gap: 40px; /* Space between text and image */
+  display: block; /* Changed to block */
+  /* Removed flex properties */
+  /* gap: 40px; /* Space between text and image */ /* Removed gap */
 }
 
 .about-content {
-  flex: 1; /* Allow text content to take available space */
+  /* flex: 1; /* Allow text content to take available space */ /* Removed flex property */
+  margin-bottom: 20px; /* Added margin for spacing between content and image */
 }
 
 .about-image {
-  flex-basis: 300px; /* Set a base width for the image container */
-  flex-shrink: 0; /* Prevent image container from shrinking */
+  /* flex-basis: 300px; /* Set a base width for the image container */ /* Removed flex property */
+  /* flex-shrink: 0; /* Prevent image container from shrinking */ /* Removed flex property */
   text-align: center; /* Center image if it's smaller than container */
 }
 
@@ -90,20 +95,19 @@
 }
 
 .services-section h2 {
-  color: #333; /* Darker heading color */
+  color: #007bff; /* Darker heading color */
   margin-bottom: 40px;
-  font-size: 2.2em;
+  font-size: 2em;
 }
 
 .service-cards {
-  display: flex;
-  justify-content: center; /* Align cards to the center */
-  gap: 30px; /* Space between cards */
-  overflow-x: auto; /* Allow horizontal scrolling */
+  display: block; /* Changed to block */
+  /* Removed flex properties */
+  /* overflow-x: auto; /* Allow horizontal scrolling */ /* Removed overflow */
   padding-bottom: 15px; /* Space for scrollbar */
   max-width: 1100px; /* Match other sections */
   margin: 0 auto; /* Center the container */
-  flex-wrap: wrap; /* Allow wrapping */
+  /* flex-wrap: wrap; /* Allow wrapping */ /* Removed flex property */
 }
 
 .service-card {
@@ -112,13 +116,12 @@
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   text-align: center;
-  flex-shrink: 0; /* Prevent shrinking */
-  min-width: 250px; /* Add a min-width to prevent extreme squishing */
+  /* flex-shrink: 0; /* Prevent shrinking */ /* Removed flex property */
   width: 250px; /* Set a fixed width */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content vertically */
+  display: block; /* Changed to block */
+  /* Removed flex properties */
+  margin: 20px auto; /* Added margin and auto for centering and spacing */
 }
 
 .service-card:hover {
@@ -133,8 +136,8 @@
 }
 
 .service-card h3 {
-  color: #333;
-  font-size: 1.4em;
+  color: #007bff;
+  font-size: 1.75em;
   margin-top: 0;
   margin-bottom: 15px;
 }
@@ -144,7 +147,7 @@
   font-size: 0.95em;
   line-height: 1.5;
   margin-bottom: 25px; /* Space before the button */
-  flex-grow: 1; /* Allow paragraph to take available space */
+  /* flex-grow: 1; /* Allow paragraph to take available space */ /* Removed flex property */
 }
 
 .service-button {
@@ -178,7 +181,7 @@
 }
 
 .why-background-image {
-  position: absolute;
+  position:relative;
   top: 0;
   right: 0;
   width: 50%; /* 50% of the section width */
@@ -213,18 +216,17 @@
 
 .testimonials-section h2 {
   text-align: center;
-  color: #333; /* Darker heading */
+  color: #007bff; /* Darker heading */
   margin-bottom: 40px;
-  font-size: 2.2em;
+  font-size: 2em;
 }
 
 .testimonial-scroll-container {
-  display: flex;
-  flex-wrap: nowrap; /* Explicitly prevent wrapping */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  padding: 20px 30px; /* Padding for the cards inside */
-  gap: 25px; /* Space between testimonial cards */
-  min-width: min-content; /* Ensure container is wide enough for content */
+  display: block; /* Changed to block */
+  /* Removed flex properties */
+  /* overflow-x: auto; /* Enable horizontal scrolling */ /* Removed overflow */
+  /* padding: 20px 30px; /* Padding for the cards inside */ /* Removed padding */
+  /* gap: 25px; /* Space between testimonial cards */ /* Removed gap */
   /* Hide scrollbar visually */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
@@ -235,22 +237,23 @@
 }
 
 .testimonial-card {
-  flex: 0 0 auto; /* Prevent cards from shrinking */
+  /* flex: 0 0 auto; /* Prevent cards from shrinking */ /* Removed flex property */
   width: 300px; /* Fixed width for each card */
   background: #f9f9f9; /* Light background for cards */
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
   scroll-snap-align: start; /* Snap alignment */
-  display: flex;
-  flex-direction: column;
+  display: block; /* Changed to block */
+  /* Removed flex properties */
+  margin: 20px auto; /* Added margin and auto for centering and spacing */
 }
 
 .testimonial-card p {
   font-style: italic;
   color: #444;
   margin-bottom: 15px;
-  flex-grow: 1; /* Allow text to take space */
+  /* flex-grow: 1; /* Allow text to take space */ /* Removed flex property */
   line-height: 1.5;
 }
 
@@ -259,4 +262,12 @@
   color: #ff5722; /* Orange accent for name */
   text-align: right;
   margin-top: auto; /* Push citation to bottom */
+}
+
+.no-image-section:nth-of-type(odd) {
+  background-color: var(--section-bg);
+}
+
+.no-image-section:nth-of-type(even) {
+  background-color: var(--alternate-section-bg);
 }

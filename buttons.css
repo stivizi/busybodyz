@@ -46,6 +46,8 @@
   font-size: 0.9em;
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
+  max-width: 85%;
+  border-radius: 0;
 }
 
 .secondary-button:hover {
@@ -77,3 +79,6 @@
 .script-button {
   margin: 5px;
 }
+
+
+button#close-exit-popup {}

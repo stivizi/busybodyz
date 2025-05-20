@@ -1,0 +1,125 @@
+/* ================================== */
+/* General Styles                     */
+/* ================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+ul, ol {
+  list-style: none; /* Remove bullets from lists */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #222;
+  background: #f5f7fa;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative; /* Needed to bring the title above the image */
+  z-index: 2; /* Ensure the title is above the background image */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Add subtle text shadow for readability */
+  margin-left: 5%; /* Adjust left margin to position within negative space */
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+/* Headings with accent color */
+h2 {
+  color: #007bff; /* Moved color to the specific h2 rule */
+}
+
+p, h1, h2, h3, h4, h5, h6, li {
+  text-align: center; /* Center all text */
+  color: var(--secondary-color);
+}
+
+img {
+  width: 100%; /* Images take full width of parent */
+  max-width: 350px; /* Set maximum width for images */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Make image a block element for better width control */
+  margin: 0 auto; /* Center block images */
+}
+
+.testimonial img {
+    max-width: 50px;
+}
+
+img.checklist-icon {
+    max-width: 50px;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    display: none;
+}
+.quiz-share-buttons {
+    margin: 0 auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.exit-popup-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+a.site-header__nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+div#countdown-offer {
+    text-align: center;
+}
+
+button#close-exit-popup {
+    margin-bottom: 2em;
+    padding: 1em;
+    width: 85%;
+    background: black;
+    color: white;
+}
+
+
+
+  header {
+    flex-direction: column; /* Stack items vertically on mobile */
+    height: auto; /* Allow height to adjust */
+    padding: 0; /* Adjust padding for mobile */
+  }

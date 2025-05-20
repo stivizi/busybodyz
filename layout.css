@@ -1,0 +1,91 @@
+/* ================================== */
+/* Layout and Structure               */
+/* ================================== */
+
+/* Sections styled as modern cards */
+section {
+  padding: 60px 0; /* Add vertical padding */
+  width: 100%; /* Make sections full width */
+  /* Remove height and max-height constraints */
+  display: block; /* Change to block display */
+  margin: 0 auto 40px auto; /* Center block element and add bottom margin */
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  background-size: cover; /* Background images cover the section */
+  background-position: center; /* Center background images */
+  background-repeat: no-repeat; /* Prevent background image tiling */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+section.section.testimonial {
+    background: black;
+    color: white;
+    border-radius: 0;
+}
+
+/* Added align class for consistent structure */
+.align {
+  /* Remove height and max-height constraints */
+  margin: 0 auto; /* Center block element */
+  padding: 0 20px; /* Add some padding on the sides */
+  display: flex; /* Change to block display */
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#quiz .align {
+    max-width: 680px;
+}
+
+/* Added styles for the inner content divs */
+.problem-content,
+.solution-content,
+.imagine-content,
+.why-content,
+.difference-content,
+.about-home-content,
+.services-overview-content,
+.testimonials-content,
+.quiz-content {
+  /* Add any specific styles for these content containers if needed */
+}
+
+.container {
+  width: 95%; /* Set container width to 95% */
+  /* Remove height and max-height constraints */
+  margin: 0 auto; /* Center block element */
+  padding: 0; /* Remove padding */
+  display: block; /* Change to block display */
+}
+
+.content {
+  width: 100%; /* Content takes full width of container */
+  /* Remove height and max-height constraints */
+  padding: 0; /* Remove padding */
+  margin: 0 auto; /* Center block element */
+  display: block; /* Change to block display */
+}
+
+.lottie-container {
+   /* Add space below the Lottie container */
+   height: 150px;
+   max-width: 250px;
+   margin: 0 auto;
+}
+
+li.card {
+    height: fit-content;
+}
+
+dotlottie-player {
+    height: 150px;
+}

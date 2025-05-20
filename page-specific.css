@@ -251,7 +251,6 @@ header.online-coaching-header .header-icon-container lord-icon {
 
 .pricing-table table.width-min-font { /* Added a class for the pricing table */
   width: 100%;
-  min-width: 280px;
   font-size: calc(12px + 0.5vw);
 }
 

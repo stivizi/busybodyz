@@ -118,11 +118,11 @@ submitBtn.onclick = () => {
   feedbackHTML += `<p>Thank you for completing the Energy Reset Quiz. This snapshot reveals valuable insights into your current habits and lifestyle. Remember, your wellness journey is unique, and small, consistent steps can lead to profound transformation. Here's a comprehensive look at your strengths and opportunities for growth, along with guidance to help you thrive.</p>`;
 
   if (strengths.length > 0) {
-    feedbackHTML += `<p><strong>Areas of Strength:</strong> You demonstrate solid habits in <strong>${strengths.join(", ")}</strong>. These strengths provide a powerful foundation to build upon. Celebrate these wins—they reflect your dedication and self-awareness.</p>`;
+    feedbackHTML += `<p>Areas of Strength: You demonstrate solid habits in ${strengths.join(", ")}. These strengths provide a powerful foundation to build upon. Celebrate these wins—they reflect your dedication and self-awareness.</p>`;
   }
 
   if (improvements.length > 0) {
-    feedbackHTML += `<p><strong>Focus Areas:</strong> Enhancing your approach to <strong>${improvements.join(", ")}</strong> can unlock new levels of energy, resilience, and well-being. Embrace these as opportunities to grow, not shortcomings.</p>`;
+    feedbackHTML += `<p>Focus Areas: Enhancing your approach to ${improvements.join(", ")} can unlock new levels of energy, resilience, and well-being. Embrace these as opportunities to grow, not shortcomings.</p>`;
   }
 
   feedbackHTML += `<p>Below is a personalized roadmap to guide your next steps:</p>`;
@@ -155,7 +155,7 @@ submitBtn.onclick = () => {
     feedbackHTML += `<h4>${category}</h4><p>${paragraph}</p>`;
   }
 
-  feedbackHTML += `<p><strong>Next Steps:</strong> Use these insights as a springboard. Focus on your strengths, and choose one or two growth areas to improve gradually. Remember, sustainable change is about progress, not perfection. With personalized coaching, you can turn these insights into an actionable, enjoyable plan that fits your life and goals.</p>`;
+  feedbackHTML += `<p>Next Steps: Use these insights as a springboard. Focus on your strengths, and choose one or two growth areas to improve gradually. Remember, sustainable change is about progress, not perfection. With personalized coaching, you can turn these insights into an actionable, enjoyable plan that fits your life and goals.</p>`;
 
   resultDiv.innerHTML += feedbackHTML;
 };
@@ -259,7 +259,7 @@ function randomizeAndGenerate() {
       <h5 style="color: #28a745; display: flex; align-items: center; margin-bottom: 10px;">
         <span style="margin-right: 8px;">✓</span> Areas of Strength
       </h5>
-      <p>You demonstrate solid habits in <strong>${strengths.join(", ")}</strong>. These strengths provide a powerful foundation to build upon and can help compensate for areas that need improvement. Celebrate these wins—they reflect your dedication and self-awareness.</p>
+      <p>You demonstrate solid habits in ${strengths.join(", ")}. These strengths provide a powerful foundation to build upon and can help compensate for areas that need improvement. Celebrate these wins—they reflect your dedication and self-awareness.</p>
       <ul style="margin-top: 5px; padding-left: 25px;">`;
 
     // Add specific strength insights
@@ -288,7 +288,7 @@ function randomizeAndGenerate() {
       <h5 style="color: #ffc107; display: flex; align-items: center; margin-bottom: 10px;">
         <span style="margin-right: 8px;">↗</span> Focus Areas
       </h5>
-      <p>Enhancing your approach to <strong>${improvements.join(", ")}</strong> can unlock new levels of energy, resilience, and well-being. These areas represent your greatest opportunities for transformation.</p>
+      <p>Enhancing your approach to ${improvements.join(", ")} can unlock new levels of energy, resilience, and well-being. These areas represent your greatest opportunities for transformation.</p>
       <ul style="margin-top: 5px; padding-left: 25px;">`;
 
     // Add specific improvement insights
@@ -479,7 +479,7 @@ function randomizeAndGenerate() {
       <p>Use these insights as a springboard. Focus on your strengths, and choose one or two growth areas to improve gradually. Remember, sustainable change is about progress, not perfection.</p>
 
       <div style="margin-top:20px; padding-top:20px; border-top:1px solid #eee;">
-        <p><strong>Ready to transform these insights into action?</strong> While this analysis provides valuable guidance, personalized coaching can help you implement these changes effectively and sustainably.</p>
+        <p>Ready to transform these insights into action? While this analysis provides valuable guidance, personalized coaching can help you implement these changes effectively and sustainably.</p>
 
         <p>A consultation with our energy reset specialist will help you:</p>
         <ul style="margin-bottom:20px;">
@@ -487,7 +487,7 @@ function randomizeAndGenerate() {
           <li>Identify the highest-impact changes for your specific situation</li>
           <li>Develop strategies to overcome your specific obstacles</li>
           <li>Establish accountability and support for lasting results</li>
-          <li><strong>Choose the right service option for your needs and goals</strong> - whether Self-led, Online, Virtual, or Hybrid Coaching</li>
+          <li>Choose the right service option for your needs and goals - whether Self-led, Online, Virtual, or Hybrid Coaching</li>
         </ul>
 
         <p style="margin-bottom:20px; font-style:italic;">Not sure which of our services is right for you? During your consultation, we'll discuss your quiz results, lifestyle, preferences, and goals to recommend the perfect coaching option that fits your unique situation.</p>
@@ -502,7 +502,7 @@ function randomizeAndGenerate() {
   // Add sharing section
   feedbackHTML += `
     <div style="margin-top:30px; text-align:center; padding-top:20px; border-top:1px solid #eee;">
-      <p><strong>Share with friends to unlock an extra bonus guide!</strong></p>
+      <p>Share with friends to unlock an extra bonus guide!</p>
       <div style="display:flex; flex-wrap:wrap; justify-content:center;">
         <a href="#" class="secondary-button" style="display: inline-block; width: auto; max-width: fit-content; padding-left: 20px; padding-right: 20px; margin:5px;">Share on Facebook</a>
         <a href="#" class="secondary-button" style="display: inline-block; width: auto; max-width: fit-content; padding-left: 20px; padding-right: 20px; margin:5px;">Share on Twitter</a>
@@ -538,11 +538,11 @@ let feedbackHTML = '<h3>Your Personalized Wellness Blueprint</h3>';
 feedbackHTML += `<p>Thank you for completing the Energy Reset Quiz. This snapshot reveals valuable insights into your current habits and lifestyle. Remember, your wellness journey is unique, and small, consistent steps can lead to profound transformation. Here's a comprehensive look at your strengths and opportunities for growth, along with guidance to help you thrive.</p>`;
 
 if (strengths.length > 0) {
-  feedbackHTML += `<p><strong>Areas of Strength:</strong> You demonstrate solid habits in <strong>${strengths.join(", ")}</strong>. These strengths provide a powerful foundation to build upon. Celebrate these wins—they reflect your dedication and self-awareness.</p>`;
+  feedbackHTML += `<p>Areas of Strength: You demonstrate solid habits in ${strengths.join(", ")}. These strengths provide a powerful foundation to build upon. Celebrate these wins—they reflect your dedication and self-awareness.</p>`;
 }
 
 if (improvements.length > 0) {
-  feedbackHTML += `<p><strong>Focus Areas:</strong> Enhancing your approach to <strong>${improvements.join(", ")}</strong> can unlock new levels of energy, resilience, and well-being. Embrace these as opportunities to grow, not shortcomings.</p>`;
+  feedbackHTML += `<p>Focus Areas: Enhancing your approach to ${improvements.join(", ")} can unlock new levels of energy, resilience, and well-being. Embrace these as opportunities to grow, not shortcomings.</p>`;
 }
 
 feedbackHTML += `<p>Below is a personalized roadmap to guide your next steps:</p>`;
@@ -575,7 +575,7 @@ for (const [category, avg] of Object.entries(categoryScores)) {
   feedbackHTML += `<h4>${category}</h4><p>${paragraph}</p>`;
 }
 
-feedbackHTML += `<p><strong>Next Steps:</strong> Use these insights as a springboard. Focus on your strengths, and choose one or two growth areas to improve gradually. Remember, sustainable change is about progress, not perfection. With personalized coaching, you can turn these insights into an actionable, enjoyable plan that fits your life and goals.</p>`;
+feedbackHTML += `<p>Next Steps: Use these insights as a springboard. Focus on your strengths, and choose one or two growth areas to improve gradually. Remember, sustainable change is about progress, not perfection. With personalized coaching, you can turn these insights into an actionable, enjoyable plan that fits your life and goals.</p>`;
 
 resultDiv.innerHTML += feedbackHTML;
 

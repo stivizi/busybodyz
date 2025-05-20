@@ -1,0 +1,321 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BusyBodyz - Reset Your Energy</title>
+    <link rel="stylesheet" href="style_new.css">
+  <!-- Lordicon animated icons -->
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  <!-- LottieFiles player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+
+  <header>
+      <nav class="mobile">
+        <h1>Reset your energy</h1>
+<h1>Transform your life</h1>
+<div class="wrapper">
+          <a href="#home" class="nav-link">Logo</a>
+          <a href="#news" class="nav-link">News</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#about" class="nav-link">About</a>
+        </div>
+      </nav>
+      <nav class="desktop">
+        <div class="nav-links">
+          <a href="#home" class="nav-link">Logo</a>
+          <a href="#news" class="nav-link">News</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#about" class="nav-link">About</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section hero hero">
+      <div class="container">
+        <article class="content">
+          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+<dotlottie-player src="https://lottie.host/19f19132-3592-4ea0-885d-32254c00fb6b/V2YxyC6WIT.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop="" autoplay=""></dotlottie-player>
+          <h1>Reset your energy</h1>
+          <h2>Transform your life</h2>
+          <p>At BusyBodyz, we help busy people like you build simple, sustainable habits to feel energized, strong, and balanced – without the overwhelm.</p>
+          <p>Discover your personalized energy blueprint in just 2 minutes and get a tailored plan that fits your unique lifestyle.</p>
+          <!-- Assuming a button or link is desired here based on template structure -->
+          <!-- <a href="#contact-form"><button class="btn">Request a Quote</button></a> -->
+        </article>
+      </div>
+    </section>
+
+    <section class="section problem">
+      <div class="container">
+        <article class="content">
+          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+          <dotlottie-player src="https://lottie.host/33665b23-9ed3-4080-94b7-407e8381aa79/OcBlltAg0t.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop="" autoplay=""></dotlottie-player>
+          <h2>Feeling drained no matter what you do?</h2>
+          <p>You wake up tired, push through your day on caffeine and willpower, and still feel sluggish. You know you should prioritize your health, but finding the time and energy feels impossible. It's not just your busy schedule—it's your body's way of telling you it needs a reset.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section welcome">
+      <div class="container">
+        <article class="content">
+          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+<dotlottie-player src="https://lottie.host/8830a2ed-bf85-46f5-9a8e-8b276e0f67cc/XShJSKbZC2.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop="" autoplay=""></dotlottie-player>
+        
+          <h2>There's a Simpler Way</h2>
+          <p>At BusyBodyz, we help busy people restore their natural energy, feel stronger, and build simple habits that fit real life--not just the 'perfect' life. No extreme diets. No exhausting workouts (unless you love them!). Just real guidance, real support, and small, meaninful changes that create lasting results.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section benefits">
+      <div class="container">
+        <article class="content">
+          <h2>Imagine Feeling...</h2>
+          <ul class="checklist">
+            <li class="checklist-item">
+              #####lottie here#####
+             <div class="benefit-energy">
+                <h3>All-Day Energy</h3><p>No more crashes or afternoon slumps.</p>
+              </div>
+            </li>
+            <li class="checklist-item">
+              #####lottie here#####
+             <div class="benefit-movement">
+                <h3>Movement with Ease</h3><p>Find workouts you actually enjoy and feel confident doing.</p>
+              </div>
+            </li>
+            <li class="checklist-item">
+              #####lottie here#####
+             <div class="benefit-sleep">
+                <h3>Deep, Refreshing Sleep</h3><p>Wake up rested and ready for the day.</p>
+              </div>
+            </li>
+            <li class="checklist-item">
+              #####lottie here#####
+             <div class="benefit-focus">
+                <h3>Improved Focus &amp; Mood</h3><p>Less stress, more clarity and calm.</p>
+              </div>
+            </li>
+            <li class="checklist-item">
+              #####lottie here#####
+             <div class="benefit-control">
+                <h3>Satisfied &amp; In Control</h3><p>Reduce cravings and build a positive relationship with food.</p>
+              </div>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section why">
+      <div class="container">
+        <article class="content">
+          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+          <img src="file:///Users/steve/git/code/busybodyz/css_modules/images/healthy%20woman%20on%20phone.webp" alt="Lorry Brown, founder of BusyBodyz">
+          <div class="why-text-content">
+            <h2>Why Train with Us?</h2>
+            <p>At BusyBodyz, we believe energy is your foundation.</p>
+            <p>Our approach is about more than just workouts — it’s about helping you reset, recharge, and reclaim your natural balance so you can feel and move your best every day.</p>
+            <p>Whether you’re looking for a fresh start, trying to build healthier habits, or simply ready to feel more energized and confident, our programs meet you where you are.</p>
+            <p>No complicated plans, no pressure — just practical, sustainable steps forward.</p>
+            <p>Here’s what makes BusyBodyz different:</p>
+            <ul class="checklist">
+              <li class="checklist-item">
+                <img src="check_mark.png" alt="Check mark" class="checklist-icon"><strong class="benefit-strong">Energy First Philosophy: We focus on restoring your internal balance, not pushing you into burnout.</p>
+              </li>
+              <li class="checklist-item">
+                <img src="check_mark.png" alt="Check mark" class="checklist-icon"><strong class="benefit-strong">Flexible Coaching Options: Choose from self-paced plans, personalized online coaching, or virtual live sessions — all designed to fit your lifestyle.</p>
+              </li>
+              <li class="checklist-item">
+                <img src="check_mark.png" alt="Check mark" class="checklist-icon"><strong class="benefit-strong">Real-World Support: Get practical tools, simple routines, and everyday strategies that work in real life — not just in a gym.</p>
+              </li>
+              <li class="checklist-item">
+                <img src="check_mark.png" alt="Check mark" class="checklist-icon"><strong class="benefit-strong">Personalized to You: Your journey is unique. We tailor your plan to your needs, goals, and energy levels.</p>
+              </li>
+              <li class="checklist-item">
+                <img src="check_mark.png" alt="Check mark" class="checklist-icon"><strong class="benefit-strong">Judgment-Free Zone: BusyBodyz is for real people living real lives. No extremes. No guilt. Just steady, lasting progress.</p>
+              </li>
+            </ul>
+            <p>Ready to reset your energy and build the momentum you’ve been looking for?</p>
+            <p>Let’s get started — your best self is already within you.</p>
+            <!-- Assuming a button or link is desired here based on template structure -->
+            <!-- <a href="#contact-form"><button class="btn">Request a Quote</button></a> -->
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section different">
+      <div class="container">
+        <article class="content">
+          <h2>What Makes Us Different?</h2>
+          <ul class="checklist">
+            <li class="checklist-item">
+              <img src="check_mark.png" alt="Check mark" class="checklist-icon">
+              <label for="different-online">
+                <h3>Online Training, Designed for Your Lifestyle</h3> Access expert coaching anytime, anywhere — no need to rearrange your schedule.<p></p>
+              </label>
+            </li>
+            <li class="checklist-item">
+              <img src="check_mark.png" alt="Check mark" class="checklist-icon">
+              <label for="different-simplicity">
+                <h3>Simplicity over Perfection</h3> No complicated routines, or overwhelming programs. Just small, meaningful changes that add up.<p></p>
+              </label>
+            </li>
+            <li class="checklist-item">
+              <img src="check_mark.png" alt="Check mark" class="checklist-icon">
+              <label for="different-sustainable">
+                <h3>Sustainable, Not Restrictive</h3> We focus on what works for you, so you can feel good and stay consistent.<p></p>
+              </label>
+            </li>
+            <li class="checklist-item">
+              <img src="check_mark.png" alt="Check mark" class="checklist-icon">
+              <label for="different-energy-first">
+                <h3>Energy First, Everything Else Follows</h3> When you feel good in your body, everything else — your workouts, your food choices, your confidence — falls into place.<p></p>
+              </label>
+            </li>
+            <li class="checklist-item">
+              <img src="check_mark.png" alt="Check mark" class="checklist-icon">
+              <label for="different-movement">
+                <h3>Movement That Feels Good</h3> Fitness isn't about punishment, it's about finding ways to move that energize you, not exhaust you.<p></p>
+              </label>
+            </li>
+            <li class="checklist-item">
+              <img src="check_mark.png" alt="Check mark" class="checklist-icon">
+              <label for="different-guidance">
+                <h3>Guidance Without the Guilt</h3> No pressure, no judgment — just support and strategies that fit into your life.<p></p>
+              </label>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section founder">
+      <div class="container">
+        <article class="content">
+          <h2>Real Results, Without the Burnout</h2>
+          <p>Hi, I’m Lorry Brown, founder of BusyBodyz Fitness and Wellness Coaching. I help everyday people reset their energy, feel good in their bodies again, and finally build a wellness routine that sticks—without extreme workouts or restrictive plans.</p>
+          <p>This isn't about pushing harder—it's about getting smarter with your energy, your time, and your health. Whether you’re feeling drained, stuck, or just need a reset, I’ll help you take the next step with confidence.</p>
+          <img src="../images/my profile pic update.JPG" alt="Lorry Brown, founder of BusyBodyz">
+          <!-- Assuming a button or link is desired here based on template structure -->
+          <!-- <a href="#contact-form"><button class="btn">Request a Quote</button></a> -->
+        </article>
+      </div>
+    </section>
+
+    <section class="section testimonial">
+      <div class="container">
+        <article class="content">
+          <div class="content testimonial">
+            <img src="assets/quote_up.png" alt="Quote Icon" loading="lazy"> <!-- Placeholder image from template -->
+            <figure class="border testimonial">
+              <p>When you're ready, there's a path here designed to meet you exactly where you are--and help you move forward with energy, balance, and confidence.</p>
+            </figure>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section services">
+      <div class="container">
+        <article class="content">
+          <h2>Choose Your Energy Reset Path</h2>
+          <p>At BusyBodyz, we believe transformation happens when you choose a path that fits your energy, your lifestyle, and your goals. Whether you want full guidance, a flexible plan, or live coaching support--there's a way to reset your energy that feels right for you.</p>
+          <ul class="list">
+            <li class="card">
+              <!-- Self-Led Plan icon (Clipboard with Play) -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" fill="#ff5722" class="service-icon">
+                <path d="M14.59 2.09L19.91 7.41C20.3 7.8 20.5 8.32 20.5 8.88V20C20.5 21.1 19.6 22 18.5 22H5.5C4.4 22 3.5 21.1 3.5 20V4C3.5 2.9 4.4 2 5.5 2H13.5C14.06 2 14.58 2.2 14.97 2.59L14.59 2.09ZM18.5 8.5H13.5V3.5L18.5 8.5ZM10 18.5L15 15.5L10 12.5V18.5Z"></path>
+              </svg>
+              <h3>Self-Led Plan</h3>
+              <p>Flexible. On your time. On your terms. Get a guided plan you can follow at your own pace--perfect if you want structure without check-ins.</p>
+              <!-- Assuming a button or link is desired here based on template structure -->
+              <!-- <a href="self-led-2.html" class="service-button">Explore the Plan</a> -->
+            </li>
+            <li class="card">
+              <!-- Online Coaching icon (Laptop with Person) -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" fill="#ff5722" class="service-icon">
+                <path d="M20 18C21.1 18 22 17.1 22 16V6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V16C2 17.1 2.9 18 4 18H0V20H24V18H20ZM4 6H20V16H4V6ZM12 8C10.9 8 10 8.9 10 10C10 11.1 10.9 12 12 12C13.1 12 14 11.1 14 10C14 8.9 13.1 8 12 8ZM16 14H8C7.45 14 7 13.55 7 13C7 11.9 9.67 11.5 12 11.5C14.33 11.5 17 11.9 17 13C17 13.55 16.55 14 16 14Z"></path>
+              </svg>
+              <h3>Online Coaching</h3>
+              <p>Personalized. Supportive. Adaptable. Work with a coach to create a customized Energy Reset plan, with check-ins to keep you aligned, focused, and progressing.</p>
+              <!-- Assuming a button or link is desired here based on template structure -->
+              <!-- <a href="online-coaching.html" class="service-button">View Coaching Options</a> -->
+            </li>
+            <li class="card">
+              <!-- Virtual Coaching icon (Person) -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" fill="#ff5722" class="service-icon">
+                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+              </svg>
+              <h3>Virtual Coaching</h3>
+              <p>Live. Interactive. Hands-On. Join virtual training sessions and real-time coaching to stay energized, accountable, and inspired from wherever you are.</p>
+              <!-- Assuming a button or link is desired here based on template structure -->
+              <!-- <a href="virtual-coaching.html" class="service-button">See Session Options</a> -->
+            </li>
+          </ul>
+          <p>Not sure which path is right for you? Find your best starting point.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section Testimonials">
+      <div class="container">
+        <article class="content">
+          <h2>What Our Clients Are Saying</h2>
+          <ul class="list">
+            <li class="card">
+              <p>"I finally have energy again! The personalized plan was easy to follow and fit into my crazy schedule. Highly recommend!"</p>
+              <cite>- Sarah K.</cite>
+            </li>
+            <li class="card">
+              <p>"The check-ins kept me accountable without feeling pressured. I've learned so much about sustainable habits."</p>
+              <cite>- Michael B.</cite>
+            </li>
+            <li class="card">
+              <p>"Virtual coaching felt like having a trainer right there. The form correction made a huge difference."</p>
+              <cite>- Jessica L.</cite>
+            </li>
+            <li class="card">
+              <p>"I was skeptical about online coaching, but BusyBodyz exceeded my expectations. The app is great, and the support is fantastic."</p>
+              <cite>- David R.</cite>
+            </li>
+            <li class="card">
+              <p>"The Energy Reset Quiz was spot on! It helped me understand exactly where to focus my efforts."</p>
+              <cite>- Emily T.</cite>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section quiz">
+      <div class="container">
+        <article class="content">
+          <h2>Ready to Find Your Starting Point?</h2>
+          <p>Stop guessing and start understanding what your body needs. Take our quick quiz to get personalized insights and discover the first steps towards sustainable energy and well-being.</p>
+        </article>
+      </div>
+    </section>
+  </h3></main><h3>
+
+  <footer>
+    <div class="container">
+      <div class="logo">
+        <img src="https://static.wixstatic.com/media/5ccc19_5312822ae08e485b8be8a3e3c572dca8~mv2.png" loading="lazy">
+        <hr class="short hr">
+        <p>© 2025 BusyBodyz. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+</h3></body></html>

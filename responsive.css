@@ -44,9 +44,10 @@
   }
   
   .secondary-button {
-    width: auto;
+    width: 100%;
     padding: 12px 12px;
     margin-top: 10px;
+    margin: 0 auto;
   }
   
   /* Mobile dropdown menu */
@@ -82,7 +83,7 @@
   /* Hide menu by default on mobile */
   #menu {
     display: none;
-    position: absolute;
+    position:relative;
     top: 60px;
     right: 20px;
     background: #fff;
@@ -94,7 +95,6 @@
     align-items: stretch;
     gap: 4px;
     z-index: 100;
-    min-width: 180px;
   }
 
 #menu a {
@@ -122,15 +122,59 @@
     color: #000;
     transform: scale(1.05);
   }
+
+  nav.desktop {
+    display: none; /* Hide desktop navigation on mobile */
+  }
+}
+
+header {
+    padding: 0;
 }
 
 /* Responsive adjustments for Header */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column; /* Stack items vertically on mobile */
-    text-align: center; /* Center text on mobile */
-    height: auto; /* Allow height to adjust */
-    padding: 40px 20px; /* Adjust padding for mobile */
+
+  .section.hero {
+    /* Remove direct background image styles */
+    position: relative; /* Needed for absolute positioning of pseudo-element */
+    overflow: hidden; /* Hide overflowing pseudo-element if necessary */
+  }
+
+  .section.hero::before {
+    content: '';
+    position:relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../happy-couple-runninng-forrest.jpg'); /* Background image for hero section on mobile */
+    background-size: cover; /* Cover the entire element */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    z-index: -1; /* Place behind the section content */
+  }
+
+  nav.mobile {
+    /* Remove direct background image styles */
+    position: relative; /* Needed for absolute positioning of pseudo-element */
+    overflow: hidden; /* Hide overflowing pseudo-element if necessary */
+  }
+
+  nav.mobile::before {
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../happy-couple-runninng-forrest.jpg'); /* Background image for mobile navigation */
+    background-size: cover; /* Cover the entire element */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    z-index: -1; /* Place behind the navigation content */
+    background-color: #00000078;
+    background-blend-mode: darken;
   }
 
   .header-content {
@@ -145,8 +189,10 @@
     margin-top: 20px; /* Add space above the image */
   }
 
-  header h1 {
+  header h1,
+  header h2 {
     font-size: 2em; /* Adjust font size for mobile */
+    color: white;
   }
 
   header p {
@@ -230,4 +276,125 @@
     background-size: 50% 100%, cover; /* Restore cover for image size */
     background-position: top left, top 20% right; /* Adjust image position for desktop */
   }
+
+.mobile h1,
+.mobile h2 {
+    color: white;
+}
+
+}
+
+@media (min-width: 1024px) {
+
+ul.checklist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+  
+  ul.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+
+  }
+
+    li.checklist-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 40%;
+    padding: 1em;
+}
+
+  li.card {
+    flex: 0 0 40%;
+    padding: 1em;
+}
+
+dotlottie-player {
+    max-width: 250px;
+    margin: 0 auto;
+    height: 6em;
+}
+
+nav.mobile {
+    display: none;
+}
+
+nav.desktop {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 3em;
+}
+
+header {
+    height: fit-content;
+    background: black;
+}
+
+a.nav-link {
+    background: none;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: flex-end;
+    width: 95%;
+}
+
+section.section.hero.hero {
+    height: 67vh;
+    background-image: url(happy-couple-runninng-forrest.jpg);
+}
+
+
+}
+
+/* Add more responsive styles below */
+
+@media (max-width: 600px) {
+  .quiz-nav-button,
+  .quiz-submit-button {
+    padding: 15px 30px; /* Increase padding for larger buttons */
+    font-size: 1.2em; /* Increase font size */
+  }
+
+  /* Styles for larger radio buttons and labels */
+  label {
+    display: block; /* Ensure label takes full width */
+    margin: 12px 0; /* Increase vertical margin */
+    font-size: 1.1em; /* Increase font size */
+    padding: 10px; /* Add padding for larger tap area */
+  }
+
+  input[type="radio"] {
+    transform: scale(1.5); /* Increase radio button size */
+    margin-right: 10px; /* Add space between radio button and label text */
+  }
+
+  .site-header-content {
+    max-width: 680px;
+    margin: 0 auto;
+}
+  
 }
