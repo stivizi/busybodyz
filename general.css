@@ -18,9 +18,14 @@ body {
   background: #f5f7fa;
 }
 
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 85%;
+}
+
 /* Headings */
 h1 {
-  font-size: 2.5em;
 }
 
 h2 {
@@ -58,6 +63,12 @@ h2 {
 p, h1, h2, h3, h4, h5, h6, li {
   text-align: center; /* Center all text */
   color: var(--secondary-color);
+  margin: 0;
+  padding: 1em 0;
+}
+
+.mobile h1 {
+    font-size: 2.5em;
 }
 
 img {
@@ -123,3 +134,8 @@ button#close-exit-popup {
     height: auto; /* Allow height to adjust */
     padding: 0; /* Adjust padding for mobile */
   }
+
+
+footer .logo {
+    display: none;
+}

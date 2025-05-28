@@ -2,59 +2,123 @@
 /* Responsive Styles                  */
 /* ================================== */
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .benefit {
-    max-height: 150px; /* Reduced height for mobile */
-    padding: 10px; /* Reduced padding for mobile */
-  }
+/* Base styles (apply to all screen sizes unless overridden) */
+h1, h2, h3 {
+    text-transform: uppercase;
+}
 
+/* Styles for screens up to 1023px (Mobile and Tablet) */
+@media (max-width: 1023px) {
+  /* Header */
   header {
     height: auto;
-    padding: 80px 20px;
+    padding: 0;
+    margin: 0;
   }
   header h1 {
-    font-size: 2.2em;
+    font-size: 2.5em;
   }
-  .cta-button {
-    margin: 20px auto;
+  header h1,
+  header h2 {
+    color: white;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+  .section.hero {
+    position: relative;
+    overflow: hidden;
+  }
+  .section.hero::before {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../happy-couple-runninng-forrest.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  nav.mobile {
+    position: relative;
+    overflow: hidden;
+  }
+  nav.mobile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../happy-couple-runninng-forrest.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-color: #00000078;
+    background-blend-mode: darken;
+  }
+  .header-content {
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  .header-background-image {
+    height: auto;
+    max-width: 80%;
+    margin-top: 20px;
+  }
+  header h1,
+  header h2 {
+    color: white;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  /* Benefits Section */
+  .benefit {
+    max-height: 150px;
+    padding: 10px;
   }
   .benefits {
     flex-direction: column;
     align-items: center;
   }
-  
-  /* Responsive content section */
+
+  /* Content Section */
   .section-content {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
   .content-block {
     padding: 20px;
   }
-  
+
+  /* CTA Section */
   .cta-section {
     padding: 20px;
   }
-  
   .button-group {
     flex-direction: column;
     align-items: center;
   }
-  
   .secondary-button {
     width: 100%;
     padding: 12px 12px;
     margin-top: 10px;
     margin: 0 auto;
   }
-  
-  /* Mobile dropdown menu */
+
+  /* Mobile Dropdown Menu */
   .dropdown {
     width: 100%;
   }
-  
   .dropdown-content {
     position: static;
     width: 100%;
@@ -65,39 +129,34 @@
     margin: 5px 0;
     padding: 5px 0;
   }
-  
   .dropdown-content a {
     padding-left: 20px;
     font-size: 0.9em;
   }
-  
   .dropdown:hover .dropdown-content {
-    display: none; /* Don't show on hover for mobile */
+    display: none;
   }
-  
-  /* Show dropdown content when Services is clicked */
   .dropdown.active .dropdown-content {
     display: block;
   }
 
-  /* Hide menu by default on mobile */
+  /* Mobile Menu */
   #menu {
     display: none;
-    position:relative;
+    position: relative;
     top: 60px;
     right: 20px;
     background: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     padding: 12px 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     flex-direction: column;
     align-items: stretch;
     gap: 4px;
     z-index: 100;
   }
-
-#menu a {
+  #menu a {
     color: #222;
     font-weight: 500;
     text-decoration: none;
@@ -108,204 +167,130 @@
     display: flex;
     align-items: center;
   }
-
-#menu .dropdown-content a {
+  #menu .dropdown-content a {
     padding-left: 32px;
     font-size: 0.95em;
     color: #666;
   }
-
   #menu a:hover,
   #menu a:focus,
   #menu a:active {
-    background: #dcdcdc; /* even darker for tap feedback */
+    background: #dcdcdc;
     color: #000;
     transform: scale(1.05);
   }
 
+  /* Desktop Navigation */
   nav.desktop {
-    display: none; /* Hide desktop navigation on mobile */
+    display: none;
+  }
+
+  /* About Section */
+  .about-home-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .about-image {
+    flex-basis: auto;
+    width: 200px;
+    margin: 0 auto;
+  }
+  .about-content p:last-of-type {
+    text-align: center;
+  }
+
+  /* Service Cards */
+  .service-cards {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    justify-content: flex-start;
+  }
+
+  /* Testimonials Section */
+  .testimonials-section h2 {
+    font-size: 1.8em;
+  }
+  .testimonial-scroll-container {
+    padding: 0 15px;
+    gap: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    justify-content: flex-start;
+  }
+  .testimonial-card {
+    width: 250px;
+    flex: 0 0 auto;
+    padding: 15px 25px;
+  }
+  .testimonial-card p {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+  .testimonials-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Booking Container */
+  .booking-container {
+    padding: 10px;
+  }
+
+  /* Quiz Buttons */
+  .quiz-nav-button,
+  .quiz-submit-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+  }
+
+  /* Quiz Radio Buttons and Labels */
+  label {
+    display: block;
+    margin: 12px 0;
+    font-size: 1.1em;
+    padding: 10px;
+  }
+  input[type="radio"] {
+    transform: scale(1.5);
+    margin-right: 10px;
+  }
+
+  /* Site Header Content */
+  .site-header-content {
+    max-width: 680px;
+    margin: 0 auto;
   }
 }
 
-header {
-    padding: 0;
-}
-
-/* Responsive adjustments for Header */
-@media (max-width: 768px) {
-
-  .section.hero {
-    /* Remove direct background image styles */
-    position: relative; /* Needed for absolute positioning of pseudo-element */
-    overflow: hidden; /* Hide overflowing pseudo-element if necessary */
-  }
-
-  .section.hero::before {
-    content: '';
-    position:relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../happy-couple-runninng-forrest.jpg'); /* Background image for hero section on mobile */
-    background-size: cover; /* Cover the entire element */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent tiling */
-    z-index: -1; /* Place behind the section content */
-  }
-
-  nav.mobile {
-    /* Remove direct background image styles */
-    position: relative; /* Needed for absolute positioning of pseudo-element */
-    overflow: hidden; /* Hide overflowing pseudo-element if necessary */
-  }
-
-  nav.mobile::before {
-    content: '';
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../happy-couple-runninng-forrest.jpg'); /* Background image for mobile navigation */
-    background-size: cover; /* Cover the entire element */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent tiling */
-    z-index: -1; /* Place behind the navigation content */
-    background-color: #00000078;
-    background-blend-mode: darken;
-  }
-
-  .header-content {
-    text-align: center; /* Center text within the content div */
-    padding-right: 0; /* Remove right padding on mobile */
-    margin-bottom: 20px; /* Add space below text content */
-  }
-
-  .header-background-image {
-    height: auto; /* Allow height to adjust based on width */
-    max-width: 80%; /* Limit image width on mobile */
-    margin-top: 20px; /* Add space above the image */
-  }
-
-  header h1,
-  header h2 {
-    font-size: 2em; /* Adjust font size for mobile */
-    color: white;
-  }
-
-  header p {
-    font-size: 1em; /* Adjust font size for mobile */
-  }
-}
-
-
-/* ================================== */
-/* About Section Styles (Homepage)   */
-/* ================================== */
-
-.about-home-section {
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  text-align: center; /* Center text on mobile */
-  gap: 30px; /* Adjust gap for vertical layout */
-}
-
-.about-image {
-  flex-basis: auto; /* Reset basis */
-  width: 200px; /* Control image size on mobile */
-  margin: 0 auto; /* Center image container */
-}
-
-.about-content p:last-of-type { /* Center the button */
-  text-align: center;
-}
-
-/* Adjust service cards for horizontal scrolling on mobile */
-.service-cards {
-  flex-wrap: nowrap; /* Prevent wrapping */
-  overflow-x: auto; /* Enable horizontal scroll */
-  padding-bottom: 15px; /* Space for scrollbar */
-  justify-content: flex-start; /* Align items to the start for scrolling */
-}
-/* Remove mobile-specific width/basis overrides for service-card */
-/* Let desktop styles (width: 250px, flex-shrink: 0) apply */
-/* .service-card { ... } */ /* This block is removed/commented out */
-
-/* Responsive adjustments for testimonials */
-.testimonials-section h2 {
-  font-size: 1.8em;
-}
-.testimonial-scroll-container {
-  padding: 0 15px; /* Adjusted padding for left/right spacing */
-  gap: 30px; /* Matched gap with service cards */
-  display: flex;
-  flex-wrap: nowrap; /* Ensure no wrapping on mobile */
-  overflow-x: auto; /* Enable horizontal scroll */
-  -webkit-overflow-scrolling: touch; /* Add for smoother scrolling on iOS */
-  white-space: nowrap; /* Ensure items stay in a single line */
-  justify-content: flex-start; /* Align items to the start for scrolling */
-}
-.testimonial-card {
-  width: 250px; /* Adjusted fixed width for horizontal scrolling */
-  flex: 0 0 auto; /* Ensure card doesn't shrink */
-  padding: 15px 25px; /* Adjusted vertical padding */
-}
-
-.testimonial-card p {
-  font-size: 0.9em; /* Reduced font size for mobile */
-  line-height: 1.4; /* Reduced line height for mobile */
-}
-
-.testimonials-section {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-@media (max-width: 768px) {
-.booking-container {
-  padding: 10px;
-}
-}
-
-/* Responsive adjustments for Why Train with Us section */
-@media (min-width: 769px) {
-  .why-background-image {
-    height: 18.75%; /* Double the height for desktop */
-    background-size: 50% 100%, cover; /* Restore cover for image size */
-    background-position: top left, top 20% right; /* Adjust image position for desktop */
-  }
-
-.mobile h1,
-.mobile h2 {
-    color: white;
-}
-
-}
-
+/* Styles for screens 1024px and wider (Desktop) */
 @media (min-width: 1024px) {
+  /* Why Train with Us Section */
+  .why-background-image {
+    height: 18.75%;
+    background-size: 50% 100%, cover;
+    background-position: top left, top 20% right;
+  }
+  .mobile h1,
+  .mobile h2 {
+    color: white;
+  }
 
-ul.checklist {
+  /* Checklist */
+  ul.checklist {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
     justify-content: flex-start;
     align-items: center;
-}
-  
-  ul.list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-
   }
-
-    li.checklist-item {
+  li.checklist-item {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -314,87 +299,108 @@ ul.checklist {
     align-items: center;
     flex: 1 1 40%;
     padding: 1em;
-}
+  }
 
+  /* List */
+  ul.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+  }
   li.card {
     flex: 0 0 40%;
     padding: 1em;
-}
+  }
 
-dotlottie-player {
+  /* Lottie Player */
+  dotlottie-player {
     max-width: 250px;
     margin: 0 auto;
     height: 6em;
-}
+  }
 
-nav.mobile {
+  /* Navigation */
+  nav.mobile {
     display: none;
-}
-
-nav.desktop {
+  }
+  nav.desktop {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: flex-end;
-    align-items: flex-start;
-    height: 3em;
-}
-
-header {
-    height: fit-content;
-    background: black;
-}
-
-a.nav-link {
+    height: 100%;
+  }
+  a.nav-link {
     background: none;
     width: fit-content;
     margin: 0;
     padding: 0;
-}
-
-.nav-links {
+  }
+  .nav-links {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-end;
+    width: 85vw;
+    max-width: 1440px;
     justify-content: flex-end;
-    width: 95%;
-}
+    gap: 4em;
+  }
 
-section.section.hero.hero {
-    height: 67vh;
+  /* Hero Section */
+  section.section.hero.hero {
     background-image: url(happy-couple-runninng-forrest.jpg);
-}
-
-
-}
-
-/* Add more responsive styles below */
-
-@media (max-width: 600px) {
-  .quiz-nav-button,
-  .quiz-submit-button {
-    padding: 15px 30px; /* Increase padding for larger buttons */
-    font-size: 1.2em; /* Increase font size */
+    margin: 0;
   }
 
-  /* Styles for larger radio buttons and labels */
-  label {
-    display: block; /* Ensure label takes full width */
-    margin: 12px 0; /* Increase vertical margin */
-    font-size: 1.1em; /* Increase font size */
-    padding: 10px; /* Add padding for larger tap area */
-  }
-
-  input[type="radio"] {
-    transform: scale(1.5); /* Increase radio button size */
-    margin-right: 10px; /* Add space between radio button and label text */
-  }
-
-  .site-header-content {
-    max-width: 680px;
-    margin: 0 auto;
+  header {
+    height: fit-content;
+    background: black;
 }
+
+  .hero .lottie-container {
+    display: none;
+}
+
+  .hero article.content {
+    color: white;
+    display: flex;
+    min-height: 87vh;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+  .button.learn-more {
+    display: flex;
+    width: fit-content;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    ?background-color: #ffffff5e;
+    padding: 0.5em;
+    margin-top: 2em;
+    width: fit-content;
+    border: solid 1px;
+    border-radius: 3px;
+}
+
+  a.btn.learn-more {
+    text-decoration: none;
+    color: white;
+    /* width: 300px; */
+}
+
+  img.eye {
+
+    width: 30px;
+    padding-right: 0.5em;
+  }
   
 }

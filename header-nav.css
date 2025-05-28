@@ -44,7 +44,12 @@ nav.mobile {
     align-content: center;
     justify-content: center;
     align-items: stretch;
-    height: 100vh;
+    min-height: 100vh;
+    background-image: url(happy-couple-runninng-forrest.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
 }
 
 .nav-links {
@@ -55,6 +60,9 @@ nav.mobile {
     justify-content: flex-start;
     align-items: stretch;
     gap: 1em;
+    margin-top: 2em;
+    width: 85%;
+    margin: 2em auto;
 }
 
 a.nav-link {
@@ -209,5 +217,8 @@ main {
   flex-direction: column; /* Stack children vertically */
   justify-content: center; /* Center content vertically */
   align-items: center; /* Center content horizontally */
-  width: 110vw;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  align-content: flex-start;
 }
