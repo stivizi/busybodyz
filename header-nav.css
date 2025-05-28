@@ -62,7 +62,7 @@ nav.mobile {
     gap: 1em;
     margin-top: 2em;
     width: 85%;
-    margin: 2em auto;
+    margin: 0 auto 2em;
 }
 
 a.nav-link {
