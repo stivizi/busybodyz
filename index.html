@@ -19,6 +19,7 @@
   <!-- Lordicon animated icons -->
   <script src="https://cdn.lordicon.com/lordicon.js"></script>
   <!-- LottieFiles player -->
+   <script src="scripts/quiz-logic-homepage.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
@@ -98,6 +99,37 @@
         </article>
       </div>
     </section>
+     <section id="homepage-quiz-section" class="section quiz-interactive">
+       <div class="container">
+         <article class="content">
+           <h2>Take Our Energy Reset Quiz</h2>
+           <p>Discover your personalized energy blueprint in just 2 minutes and get insights tailored to your unique lifestyle.</p>
+
+           <div id="homepage-quiz-container"></div>
+
+           <div id="homepage-progress-container" class="progress-container">
+             <div id="homepage-progress-bar" class="progress-bar">
+               <div id="homepage-progress-fill" class="progress-fill"></div>
+             </div>
+             <p id="homepage-progress-text" class="progress-text">Question 1 of 20</p>
+           </div>
+
+           <div class="quiz-buttons">
+             <button id="homepage-prev-btn" class="secondary-button quiz-nav-button">Back</button>
+             <button id="homepage-next-btn" class="secondary-button quiz-nav-button">Next</button>
+             <button id="homepage-submit-btn" class="secondary-button quiz-submit-button">Submit</button>
+           </div>
+         </article>
+       </div>
+     </section>
+
+     <section id="homepage-result" class="section quiz-result" style="display: none;">
+       <div class="container">
+         <article class="content">
+           <!-- Quiz results will be inserted here by JavaScript -->
+         </article>
+       </div>
+     </section>
 
     <section class="section welcome">
       <div class="container">
