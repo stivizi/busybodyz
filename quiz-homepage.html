@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Energy Reset Quiz</title>
+    <!-- PicoCSS for responsive design -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yohns/picocss@2.2.10/css/pico.min.css">
+    <style>
+        /* Custom Quiz Styles */
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .quiz-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .quiz-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .quiz-progress {
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .quiz-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff5722, #ff9800);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+
+        .quiz-question {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+
+        .quiz-options {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .quiz-option {
+            position: relative;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        .quiz-option:hover {
+            border-color: #ff9800;
+            background: #fff3e0;
+        }
+
+        .quiz-option.selected {
+            border-color: #ff5722;
+            background: #ffebee;
+        }
+
+        .quiz-option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .quiz-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .quiz-btn {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            min-height: 44px;
+        }
+
+        .quiz-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .quiz-btn.primary {
+            background: linear-gradient(90deg, #ff5722, #ff9800);
+            color: white;
+        }
+
+        .quiz-btn.primary:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+        }
+
+        .quiz-btn.secondary {
+            background: #f8f9fa;
+            color: #666;
+            border: 2px solid #e9ecef;
+        }
+
+        .quiz-btn.secondary:hover:not(:disabled) {
+            background: #e9ecef;
+        }
+
+        .quiz-results {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .quiz-results h2 {
+            color: #ff5722;
+            margin-bottom: 1rem;
+        }
+
+        .quiz-score-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .quiz-score-bar {
+            margin: 1rem 0;
+            height: 24px;
+            background: #e9ecef;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .quiz-score-fill {
+            height: 100%;
+            border-radius: 12px;
+            transition: width 1.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        .quiz-feedback {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #ff5722;
+        }
+
+        .quiz-feedback h3 {
+            color: #ff5722;
+            margin-bottom: 1rem;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .quiz-card {
+            animation: slideIn 0.5s ease forwards;
+        }
+
+        .quiz-option.selected::before {
+            content: "✓";
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ff5722;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .quiz-container {
+                padding: 1rem 0.5rem;
+            }
+
+            .quiz-card {
+                padding: 1.5rem;
+            }
+
+            .quiz-question {
+                font-size: 1.25rem;
+            }
+
+            .quiz-buttons {
+                flex-direction: column;
+            }
+
+            .quiz-btn {
+                width: 100%;
+            }
+        }
+
+        /* Loading state */
+        .quiz-loading {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .quiz-loading::after {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #ff5722;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Quiz Header -->
+        <div class="quiz-card">
+            <h1 style="text-align: center; color: #ff5722; margin-bottom: 1rem;">Energy Reset Quiz</h1>
+            <p style="text-align: center; color: #666; margin-bottom: 0;">Discover your personalized energy blueprint in just 2 minutes!</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="quiz-progress">
+            <div class="quiz-progress-fill" id="progressFill"></div>
+        </div>
+
+        <!-- Question Counter -->
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;" id="questionCounter">Question 1 of 21</p>
+
+        <!-- Quiz Content -->
+        <div class="quiz-card" id="quizCard">
+            <h2 class="quiz-question" id="questionText"></h2>
+            <div class="quiz-options" id="optionsContainer"></div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="quiz-buttons">
+            <button class="quiz-btn secondary" id="prevBtn">Previous</button>
+            <button class="quiz-btn primary" id="nextBtn">Next</button>
+            <button class="quiz-btn primary" id="submitBtn" style="display: none;">Get My Results</button>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" style="display: none;">
+            <div class="quiz-results">
+                <h2>🎉 Your Energy Blueprint is Ready!</h2>
+                <p style="font-size: 1.1rem; color: #666;">Based on your responses, here's your personalized energy profile:</p>
+
+                <div class="quiz-score-card">
+                    <h3>Your Energy Scores</h3>
+                    <div class="quiz-score-bar">
+                        <div class="quiz-score-fill" id="sleepScore" style="background: linear-gradient(90deg, #4caf50, #8bc34a);"></div>
+                    </div>
+                    <p style="margin-bottom: 1rem;"><strong>Sleep Quality:</strong> <span id="sleepScoreText"></span></p>
+
+                    <div class="quiz-score-bar">
+                        <div class="quiz-score-fill" id="nutritionScore" style="background: linear-gradient(90deg, #2196f3, #03a9f4);"></div>
+                    </div>
+                    <p style="margin-bottom: 1rem;"><strong>Nutrition Habits:</strong> <span id="nutritionScoreText"></span></p>
+
+                    <div class="quiz-score-bar">
+                        <div class="quiz-score-fill" id="stressScore" style="background: linear-gradient(90deg, #9c27b0, #ba68c8);"></div>
+                    </div>
+                    <p style="margin-bottom: 1rem;"><strong>Stress Management:</strong> <span id="stressScoreText"></span></p>
+
+                    <div class="quiz-score-bar">
+                        <div class="quiz-score-fill" id="activityScore" style="background: linear-gradient(90deg, #ff9800, #ffb74d);"></div>
+                    </div>
+                    <p><strong>Physical Activity:</strong> <span id="activityScoreText"></span></p>
+                </div>
+
+                <div class="quiz-feedback" id="personalizedFeedback">
+                    <!-- Dynamic feedback will be inserted here -->
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <button class="quiz-btn primary" style="font-size: 1.2rem; padding: 1rem 3rem;">Get Your Free Personalized Plan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Quiz Data - Enhanced with better questions and scoring
+        const quizData = [
+            {
+                question: "How many servings of fruits and vegetables do you eat daily?",
+                options: ["0-1 servings", "2-3 servings", "4-5 servings", "6+ servings"],
+                category: "nutrition",
+                weights: [1, 3, 4, 5]
+            },
+            {
+                question: "How often do you consume processed or fast foods per week?",
+                options: ["Daily or more", "4-6 times", "1-3 times", "Rarely or never"],
+                category: "nutrition",
+                weights: [1, 2, 3, 5]
+            },
+            {
+                question: "Do you regularly eat breakfast within 1-2 hours of waking?",
+                options: ["Never", "Sometimes", "Often", "Always"],
+                category: "nutrition",
+                weights: [1, 3, 4, 5]
+            },
+            {
+                question: "How much water do you drink on an average day?",
+                options: ["Less than 2 cups", "2-4 cups", "5-7 cups", "8+ cups"],
+                category: "nutrition",
+                weights: [1, 2, 3, 5]
+            },
+            {
+                question: "How often do you feel satisfied and energized after meals?",
+                options: ["Rarely", "Sometimes", "Often", "Always"],
+                category: "nutrition",
+                weights: [1, 2, 3, 5]
+            },
+            {
+                question: "On average, how many hours of sleep do you get per night?",
+                options: ["Less than 5 hours", "5-6 hours", "7-8 hours", "9+ hours"],
+                category: "sleep",
+                weights: [1, 2, 4, 5]
+            },
+            {
+                question: "How rested do you feel upon waking most mornings?",
+                options: ["Very tired", "Somewhat tired", "Fairly rested", "Very rested"],
+                category: "sleep",
+                weights: [1, 2, 4, 5]
+            },
+            {
+                question: "Do you have a consistent bedtime and wake-up time?",
+                options: ["Never", "Sometimes", "Often", "Always"],
+                category: "sleep",
+                weights: [1, 2, 3, 5]
+            },
+            {
+                question: "How often do you wake up during the night?",
+                options: ["Frequently (3+ times)", "Sometimes (1-2 times)", "Rarely", "Never"],
+                category: "sleep",
+                weights: [1, 2, 4, 5]
+            },
+            {
+                question: "Do you avoid screens and bright lights at least 30 minutes before bed?",
+                options: ["Never", "Sometimes", "Often", "Always"],
+                category: "sleep",
+                weights: [1, 2, 3, 5]
+            },
+            {
+                question: "How often do you feel overwhelmed or stressed during the day?",
+                options: ["Frequently", "Often", "Sometimes", "Rarely"],
+                category: "stress",
+                weights: [1, 2, 3, 5]
+            },
+            {
+                question: "How well do you feel you manage unexpected challenges?",
+                options: ["Poorly", "Fairly", "Well", "Very well"],
+                category: "stress",
+                weights: [1, 3, 4, 5]
+            },
+            {
+                question: "Do you experience physical symptoms of stress (e.g., headaches, tension)?",
+                options: ["Frequently", "Often", "Sometimes", "Rarely"],
+                category: "stress",
+                weights: [1, 2, 3, 5]
+            },
+            {
+                question: "How often do you take breaks to relax or reset during your day?",
+                options: ["Never", "Rarely", "Sometimes", "Often"],
+                category: "stress",
+                weights: [1, 2, 3, 5]
+            },
+            {
+                question: "How supported do you feel by your social circle when stressed?",
+                options: ["Not at all", "Somewhat", "Moderately", "Very much"],
+                category: "stress",
+                weights: [1, 2, 3, 5]
+            },
+            {
+                question: "How many days per week do you engage in intentional physical activity?",
+                options: ["0 days", "1-2 days", "3-4 days", "5+ days"],
+                category: "activity",
+                weights: [1, 2, 3, 5]
+            },
+            {
+                question: "How energized or fatigued do you feel after physical activity?",
+                options: ["Very fatigued", "Somewhat fatigued", "Neutral", "Very energized"],
+                category: "activity",
+                weights: [1, 2, 3, 5]
+            },
+            {
+                question: "Do you incorporate movement throughout your day (e.g., walking, stretching)?",
+                options: ["Never", "Rarely", "Sometimes", "Often"],
+                category: "activity",
+                weights: [1, 2, 3, 5]
+            },
+            {
+                question: "How confident are you in your ability to stay consistent with exercise?",
+                options: ["Not confident", "Somewhat confident", "Confident", "Very confident"],
+                category: "activity",
+                weights: [1, 3, 4, 5]
+            },
+            {
+                question: "How enjoyable do you find your current physical activity routine?",
+                options: ["Not enjoyable", "Somewhat enjoyable", "Enjoyable", "Very enjoyable"],
+                category: "activity",
+                weights: [1, 3, 4, 5]
+            },
+            {
+                question: "How often do you feel motivated to prioritize your health and energy?",
+                options: ["Rarely", "Sometimes", "Often", "Always"],
+                category: "mindset",
+                weights: [1, 2, 3, 5]
+            }
+        ];
+
+        // Quiz State
+        let currentQuestionIndex = 0;
+        let answers = new Array(quizData.length).fill(null);
+        let scores = { nutrition: 0, sleep: 0, stress: 0, activity: 0, mindset: 0 };
+
+        // DOM Elements
+        const questionText = document.getElementById('questionText');
+        const optionsContainer = document.getElementById('optionsContainer');
+        const progressFill = document.getElementById('progressFill');
+        const questionCounter = document.getElementById('questionCounter');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const submitBtn = document.getElementById('submitBtn');
+        const quizCard = document.getElementById('quizCard');
+        const resultsSection = document.getElementById('resultsSection');
+
+        // Initialize Quiz
+        function initQuiz() {
+            updateProgress();
+            showQuestion();
+            updateButtons();
+        }
+
+        // Update Progress Bar
+        function updateProgress() {
+            const progress = ((currentQuestionIndex + 1) / quizData.length) * 100;
+            progressFill.style.width = progress + '%';
+            questionCounter.textContent = `Question ${currentQuestionIndex + 1} of ${quizData.length}`;
+        }
+
+        // Show Current Question
+        function showQuestion() {
+            const question = quizData[currentQuestionIndex];
+            questionText.textContent = question.question;
+
+            optionsContainer.innerHTML = '';
+
+            question.options.forEach((option, index) => {
+                const optionElement = document.createElement('div');
+                optionElement.className = 'quiz-option';
+                optionElement.innerHTML = `
+                    <input type="radio" name="quiz-option" value="${index}" ${answers[currentQuestionIndex] === index ? 'checked' : ''}>
+                    ${option}
+                `;
+
+                optionElement.addEventListener('click', () => selectOption(index));
+                optionsContainer.appendChild(optionElement);
+            });
+        }
+
+        // Handle Option Selection
+        function selectOption(index) {
+            answers[currentQuestionIndex] = index;
+
+            // Update visual selection
+            const options = optionsContainer.querySelectorAll('.quiz-option');
+            options.forEach((option, i) => {
+                option.classList.toggle('selected', i === index);
+            });
+        }
+
+        // Update Button States
+        function updateButtons() {
+            prevBtn.disabled = currentQuestionIndex === 0;
+            nextBtn.style.display = currentQuestionIndex === quizData.length - 1 ? 'none' : 'inline-block';
+            submitBtn.style.display = currentQuestionIndex === quizData.length - 1 ? 'inline-block' : 'none';
+        }
+
+        // Navigation Functions
+        function nextQuestion() {
+            if (answers[currentQuestionIndex] === null) {
+                alert('Please select an option before continuing.');
+                return;
+            }
+
+            if (currentQuestionIndex < quizData.length - 1) {
+                currentQuestionIndex++;
+                updateProgress();
+                showQuestion();
+                updateButtons();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                updateProgress();
+                showQuestion();
+                updateButtons();
+            }
+        }
+
+        function submitQuiz() {
+            if (answers[currentQuestionIndex] === null) {
+                alert('Please select an option before submitting.');
+                return;
+            }
+
+            // Calculate scores
+            answers.forEach((answerIndex, questionIndex) => {
+                if (answerIndex !== null) {
+                    const question = quizData[questionIndex];
+                    const weight = question.weights[answerIndex];
+                    scores[question.category] += weight;
+                }
+            });
+
+            // Calculate averages
+            Object.keys(scores).forEach(category => {
+                const maxScore = quizData.filter(q => q.category === category).length * 5;
+                scores[category] = Math.round((scores[category] / maxScore) * 100);
+            });
+
+            showResults();
+        }
+
+        // Show Results
+        function showResults() {
+            quizCard.style.display = 'none';
+            document.querySelector('.quiz-buttons').style.display = 'none';
+            resultsSection.style.display = 'block';
+
+            // Update score bars with animation
+            setTimeout(() => {
+                document.getElementById('sleepScore').style.width = scores.sleep + '%';
+                document.getElementById('sleepScore').textContent = scores.sleep + '%';
+                document.getElementById('sleepScoreText').textContent = getScoreText(scores.sleep);
+
+                document.getElementById('nutritionScore').style.width = scores.nutrition + '%';
+                document.getElementById('nutritionScore').textContent = scores.nutrition + '%';
+                document.getElementById('nutritionScoreText').textContent = getScoreText(scores.nutrition);
+
+                document.getElementById('stressScore').style.width = scores.stress + '%';
+                document.getElementById('stressScore').textContent = scores.stress + '%';
+                document.getElementById('stressScoreText').textContent = getScoreText(scores.stress);
+
+                document.getElementById('activityScore').style.width = scores.activity + '%';
+                document.getElementById('activityScore').textContent = scores.activity + '%';
+                document.getElementById('activityScoreText').textContent = getScoreText(scores.activity);
+            }, 500);
+
+            // Generate personalized feedback
+            generateFeedback();
+        }
+
+        // Get Score Text Description
+        function getScoreText(score) {
+            if (score >= 80) return 'Excellent';
+            if (score >= 60) return 'Good';
+            if (score >= 40) return 'Needs Improvement';
+            return 'Needs Attention';
+        }
+
+        // Generate Personalized Feedback
+        function generateFeedback() {
+            const feedbackElement = document.getElementById('personalizedFeedback');
+            let feedback = '<h3>Your Personalized Energy Blueprint</h3>';
+
+            const lowestScore = Object.keys(scores).reduce((a, b) => scores[a] < scores[b] ? a : b);
+            const highestScore = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
+
+            feedback += '<p>Based on your responses, here are your key insights:</p>';
+            feedback += '<ul>';
+
+            if (scores.sleep < 60) {
+                feedback += '<li><strong>Sleep Priority:</strong> Your sleep quality could use some attention. Consider establishing a consistent sleep schedule and creating a relaxing bedtime routine.</li>';
+            }
+
+            if (scores.nutrition < 60) {
+                feedback += '<li><strong>Nutrition Focus:</strong> Your eating habits may be impacting your energy. Try incorporating more whole foods and staying hydrated throughout the day.</li>';
+            }
+
+            if (scores.stress < 60) {
+                feedback += '<li><strong>Stress Management:</strong> Learning to manage stress better could significantly boost your energy. Consider incorporating daily relaxation techniques.</li>';
+            }
+
+            if (scores.activity < 60) {
+                feedback += '<li><strong>Movement Matters:</strong> Regular physical activity is essential for sustained energy. Start with small, enjoyable activities you can maintain consistently.</li>';
+            }
+
+            feedback += '</ul>';
+            feedback += '<p><strong>Next Steps:</strong> Focus on your strongest area (' + highestScore + ') to build momentum, while gradually improving your lowest scoring area (' + lowestScore + '). Small, consistent changes lead to lasting results!</p>';
+
+            feedbackElement.innerHTML = feedback;
+        }
+
+        // Event Listeners
+        prevBtn.addEventListener('click', prevQuestion);
+        nextBtn.addEventListener('click', nextQuestion);
+        submitBtn.addEventListener('click', submitQuiz);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' && currentQuestionIndex < quizData.length - 1) {
+                nextQuestion();
+            } else if (e.key === 'ArrowLeft' && currentQuestionIndex > 0) {
+                prevQuestion();
+            }
+        });
+
+        // Initialize the quiz
+        initQuiz();
+    </script>
+</body>
+</html>
