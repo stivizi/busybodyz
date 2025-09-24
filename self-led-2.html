@@ -20,32 +20,47 @@
 
 </head>
 <body class="page-self-led">
-
-    <header>
-      <main>
-        <div class="site-header-content">
-          <div class="header-logo-container">
-            <img
-              src="https://static.wixstatic.com/media/5ccc19_5312822ae08e485b8be8a3e3c572dca8~mv2.png"
-              alt="BusyBodyz Icon"
-            />
-          </div>
-          <nav aria-label="Main navigation">
-            <a href="index.html" aria-current="page" class="site-header__nav-link">Home</a>
-            <a href="about.html" class="site-header__nav-link">About</a>
-          </nav>
-        </div>
-      </main>
-    </header>
+<header>
+  <div class="header">
+    <a href="index.html" class="logo-link">
+      <div class="logo-container">
+        <img src="busybodyzlogo.png" alt="BusyBodyz Logo" class="header-logo">
+        <h2 class="header-title"><span class="brand-name">BusyBodyz</span> Fitness Coaching</h2>
+      </div>
+    </a>
+    <div id="menu-toggle" class="P4my70" aria-label="Toggle menu">
+      <div class="baZw44">
+        <span class="T8_LA1 HZW1lN"></span>
+        <span class="T8_LA1 dbDvn7"></span>
+        <span class="T8_LA1 iu4m2t"></span>
+      </div>
+    </div>
+    <a href="booking.html" class="header-cta">Talk With<br>A Coach</a>
+    <nav class="nav">
+       <div class="nav-content">
+         <button id="close-menu" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 24px; color: #333;">&times;</button>
+         <div class="nav-links">
+           <a href="index.html#services" class="nav-link">Coaching Services</a>
+           <a href="self-led-2.html" class="nav-link">Self Led</a>
+           <a href="online-coaching.html" class="nav-link">Online Coaching</a>
+           <a href="virtual-coaching.html" class="nav-link">Virtual Coaching</a>
+           <a href="about.html" class="nav-link">About Us</a>
+           <a href="quiz.html" class="nav-link">Energy Reset Quiz</a>
+           <a href="booking.html" class="nav-link">Book Consultation</a>
+         </div>
+       </div>
+     </nav>
+  </div>
+</header>
 
 <main>
-  <section>
+  <section class="hero">
     <article>
       <div class="align">
+        <h1 class="online-coaching-text">Self-Led Coaching</h1>
+        <img src="css_modules/images/birddogfella.webp" alt="Bird Dog Fella">
         <p>No check-ins, no pressure—just a smart, structured path to better energy and movement.</p>
-        <div class="button-group margin-top-20px">
-          <a href="#" class="cta-button">Start Your Plan Now</a>
-        </div>
+        <a href="#plan-options" class="cta-button hero-cta">Self-Led Plan Options</a>
       </div>
     </article>
   </section>
@@ -69,7 +84,7 @@
         <h2>What You Get:</h2>
         <p>Everything you need to start strong, stay consistent, and build momentum on your own.</p>
         <ul>
-          <li>A 4-week structured training plan based on your Energy Reset Quiz results</li>
+          <li>A structured and progressive training plan. </li>
           <li>Wellness and habit tips baked into your routine</li>
           <li>Video demos and guided instruction via the BusyBodyz app</li>
           <li>Easy-to-follow schedule with reminders and progress tracking</li>
@@ -84,36 +99,137 @@
       <div class="align">
         <h2>Self-Led Plan Options</h2>
         <p>Each plan includes app access, videos, and weekly structure.</p>
-        
+
         <div class="pricing-table-container">
           <div class="pricing-table">
             <table>
               <thead>
                 <tr>
-                  <th>Plan Type</th>
-                  <th>Best For</th>
-                  <th>Price</th>
+                  <th>Plan</th>
+                  <th>Who It’s For</th>
+                  <th>Price (CAD / month)</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Reset Foundation</td>
-                  <td>Beginners or restarters</td>
-                  <td>$XX (4 weeks)</td>
+                  <td><a href="https://www.trainerize.me/profile/busybodyzpersonalfitness/?planGUID=ca012f4819d14d1e83cc6da0a3e3107b&mode=checkout" target="_blank"><strong>Essential</strong></a></td>
+                  <td>Beginners who want a <strong>straightforward self-led program</strong> with fitness tracking and basic progress milestones. Best for those who are motivated and just need structure.</td>
+                  <td><strong>$29 / month</strong></td>
                 </tr>
                 <tr>
-                  <td>Energy Builder</td>
-                  <td>Moderate fitness, ready for a boost</td>
-                  <td>$XX (4 weeks)</td>
+                  <td><a href="https://www.trainerize.me/profile/busybodyzpersonalfitness/?planGUID=65aa0146c27c4a6f9fb7eb1682e1fd9e&mode=checkout" target="_blank"><strong>Enhanced</strong></a></td>
+                  <td>Beginners who want <strong>extra guidance with healthy habits</strong> (nutrition, sleep, stress) alongside their workouts. Ideal for those who want a well-rounded routine without being overwhelmed.</td>
+                  <td><strong>$49 / month</strong></td>
                 </tr>
                 <tr>
-                  <td>Momentum Maintainer</td>
-                  <td>Active individuals wanting structure</td>
-                  <td>$XX (4 weeks)</td>
+                  <td><a href="https://www.trainerize.me/profile/busybodyzpersonalfitness/?planGUID=ca012f4819d14d1e83cc6da0a3e3107b&mode=checkout" target="_blank"><strong>Complete</strong></a></td>
+                  <td>Beginners who want a <strong>full lifestyle approach</strong> with the widest range of habit, progress, and adjustment resources in one place. Great for those ready to take on fitness + eating habits + mindset together.</td>
+                  <td><strong>$69 / month</strong></td>
                 </tr>
               </tbody>
             </table>
           </div>
+        </div>
+        <p style="text-align: center; font-size: 1.2em; font-weight: bold; margin: 20px 0;"> Click on a plan</p>
+        
+      </div>
+    </article>
+  </section>
+  <section id="feature-comparison">
+    <article>
+      <div class="align">
+        <h2>Details for Self-Led Plans</h2>
+        <div class="feature-table-container">
+          <table class="feature-table">
+            <thead>
+              <tr>
+                <th>Feature / Plan</th>
+                <th><a href="https://www.trainerize.me/profile/busybodyzpersonalfitness/?planGUID=ca012f4819d14d1e83cc6da0a3e3107b&mode=checkout" target="_blank"><strong>Essential</strong></a></th>
+                <th><a href="https://www.trainerize.me/profile/busybodyzpersonalfitness/?planGUID=65aa0146c27c4a6f9fb7eb1682e1fd9e&mode=checkout" target="_blank"><strong>Enhanced</strong></a></th>
+                <th><a href="https://www.trainerize.me/profile/busybodyzpersonalfitness/?planGUID=ca012f4819d14d1e83cc6da0a3e3107b&mode=checkout" target="_blank"><strong>Complete</strong></a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Level of Resources</strong></td>
+                <td>Basic tools & features</td>
+                <td>Moderate resources & habit/lifestyle guidance</td>
+                <td>Full suite of resources & holistic guidance</td>
+              </tr>
+              <tr>
+                <td><strong>Program Format & Access</strong></td>
+                <td>Progressive beginner programs (same for all plans)</td>
+                <td>Progressive beginner programs (same for all plans)</td>
+                <td>Progressive beginner programs (same for all plans)</td>
+              </tr>
+              <tr>
+                <td><strong>Milestone Tracking</strong></td>
+                <td>Basic milestones to celebrate key achievements (e.g., reps, weight, workouts completed)</td>
+                <td>Milestone reminders with fitness + lifestyle habit guidance</td>
+                <td>Comprehensive milestones with holistic tracking (fitness, nutrition, sleep, stress, mindset)</td>
+              </tr>
+              <tr>
+                <td><strong>Adjustment Guidance</strong></td>
+                <td>Simple suggestions for next steps in exercises (reps, weight, intensity)</td>
+                <td>Suggestions for fitness + habit/lifestyle adjustments</td>
+                <td>Detailed adjustment suggestions across fitness, nutrition, sleep, stress, and mindset</td>
+              </tr>
+              <tr>
+                <td><strong>Fitness Tracking in App</strong></td>
+                <td>Log workouts, sets, reps, weights</td>
+                <td>Log workouts + milestone tracking</td>
+                <td>Log workouts + milestone tracking + suggested adjustments</td>
+              </tr>
+              <tr>
+                <td><strong>Progress Tracking in App</strong></td>
+                <td>Weight, photos, measurements</td>
+                <td>Same + progress reminders</td>
+                <td>Same + milestone summaries & insights</td>
+              </tr>
+              <tr>
+                <td><strong>Goal Setting in App</strong></td>
+                <td>Basic fitness goal tracking</td>
+                <td>Fitness + lifestyle habit goal tracking</td>
+                <td>Holistic goal tracking (fitness, nutrition, sleep, stress, mindset)</td>
+              </tr>
+              <tr>
+                <td><strong>Nutrition Support in App</strong></td>
+                <td>Habit suggestions & tips</td>
+                <td>Basic guidance & habit tracking</td>
+                <td>Full nutrition guidance & habit tracking</td>
+              </tr>
+              <tr>
+                <td><strong>Stress Management in App</strong></td>
+                <td>&mdash;</td>
+                <td>Simple stress management tips</td>
+                <td>Structured guidance for stress reduction</td>
+              </tr>
+              <tr>
+                <td><strong>Sleep Hygiene in App</strong></td>
+                <td>&mdash;</td>
+                <td>Sleep tips & reminders</td>
+                <td>Personalized sleep tips & habit support</td>
+              </tr>
+              <tr>
+                <td><strong>Mindset Support in App</strong></td>
+                <td>&mdash;</td>
+                <td>Encouragement & habit guidance</td>
+                <td>Integrated mindset support throughout programs</td>
+              </tr>
+              <tr>
+                <td><strong>Email Communication</strong></td>
+                <td>Monthly summary</td>
+                <td>Bi-weekly summary</td>
+                <td>Monthly holistic summary</td>
+              </tr>
+              <tr>
+                <td><strong>Trainerize Services Included</strong></td>
+                <td>✅ Logging & tracking tools</td>
+                <td>✅ Everything in Essential<br>✅ Reminders & habit guidance</td>
+                <td>✅ Everything in Enhanced<br>✅ Advanced habit tracking & insights</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </article>
@@ -124,10 +240,12 @@
       <div class="align">
         <h2>How It Works:</h2>
         <ol>
-          <li>Download the BusyBodyz app and access your full routine</li>
-          <li>Follow your weekly schedule and track your progress</li>
-          <li>Repeat or upgrade to coaching if you want more support later</li>
+          <li>Choose the self-led plan that is best for you.</li>
+          <li>Follow the instructions to download the Busybody App.</li>
+          <li>Sign in to the App to access your profile and programs. </li>
+          <li>Your all set.  Follow your prescribed program.  Track and log workouts and habits.</li>
         </ol>
+        <a href="#plan-options" class="cta-button">View Plans</a>
       </div>
     </article>
   </section>
@@ -148,8 +266,8 @@
       <div class="align">
         <h2>FAQs</h2>
         <div class="content-block">
-          <h3>Can I repeat the plan after 4 weeks?</h3>
-          <p>Yes! You can retake the quiz or move to a new level based on how you feel.</p>
+          <h3>Can I repeat the plan after the prescribed duration?</h3>
+          <p>Yes!  However, you need to contact busybodyz for this request.</p>
           
           <h3>Can I upgrade to coaching later?</h3>
           <p>Absolutely—your app account stays active, and we can build on your progress.</p>
@@ -169,7 +287,7 @@
           <p>Sometimes all you need is a plan you don't have to think about.</p>
           <p>Let's get you back into flow.</p>
           <div class="button-group">
-            <a href="#" class="cta-button">Start My Plan</a>
+            <a href="#plan-options" class="cta-button">Choose Your Plan</a>
           </div>
         </div>
       </div>
@@ -247,5 +365,8 @@ dateInput2.addEventListener('change', () => {
 });
 </script>
 
+<script src="scripts/nav-menu.js"></script>
+
 </body>
+
 </html>

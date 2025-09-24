@@ -19,36 +19,49 @@
 <script src="https://cdn.lordicon.com/lordicon.js"></script>
 
 </head>
-<body>
-
-    <header>
-      <main>
-        <div class="site-header-content">
-          <div class="header-logo-container">
-            <img
-              src="https://static.wixstatic.com/media/5ccc19_5312822ae08e485b8be8a3e3c572dca8~mv2.png"
-              alt="BusyBodyz Icon"
-            />
-          </div>
-          <nav aria-label="Main navigation">
-            <a href="index.html" aria-current="page" class="site-header__nav-link">Home</a>
-            <a href="about.html" class="site-header__nav-link">About</a>
-          </nav>
-        </div>
-      </main>
-    </header>
+<body class="online-coaching-page">
+<header>
+  <div class="header">
+    <a href="index.html" class="logo-link">
+      <div class="logo-container">
+        <img src="busybodyzlogo.png" alt="BusyBodyz Logo" class="header-logo">
+        <h2 class="header-title"><span class="brand-name">BusyBodyz</span> Fitness Coaching</h2>
+      </div>
+    </a>
+    <div id="menu-toggle" class="P4my70" aria-label="Toggle menu">
+      <div class="baZw44">
+        <span class="T8_LA1 HZW1lN"></span>
+        <span class="T8_LA1 dbDvn7"></span>
+        <span class="T8_LA1 iu4m2t"></span>
+      </div>
+    </div>
+    <a href="booking.html" class="header-cta">Talk With<br>A Coach</a>
+    <nav class="nav">
+       <div class="nav-content">
+         <button id="close-menu" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 24px; color: #333;">&times;</button>
+         <div class="nav-links">
+           <a href="index.html#services" class="nav-link">Coaching Services</a>
+           <a href="self-led-2.html" class="nav-link">Self Led</a>
+           <a href="online-coaching.html" class="nav-link">Online Coaching</a>
+           <a href="virtual-coaching.html" class="nav-link">Virtual Coaching</a>
+           <a href="about.html" class="nav-link">About Us</a>
+           <a href="quiz.html" class="nav-link">Energy Reset Quiz</a>
+           <a href="booking.html" class="nav-link">Book Consultation</a>
+         </div>
+       </div>
+     </nav>
+  </div>
+</header>
 
 <main>
-  <section>
-    <article>
-      <div class="align">
-        <p>Get Personalized Support Without the In-Person Schedule. Stay on track with custom workouts, regular check-ins, and expert guidance—wherever you are.</p>
-        <div class="button-group margin-top-20px">
-          <a href="booking.html" class="cta-button">Start Coaching Now</a>
-          <a href="#coaching-plans" class="secondary-button padding-left-right-20px">See All Coaching Plans</a>
-        </div>
+  <section class="hero-section">
+    <h2 class="hero-subtitle-top-left">Online Coaching</h2>
+    <div class="align">
+      <p>Get Personalized Support Without the In-Person Schedule. Stay on track with custom workouts, regular check-ins, and expert guidance—wherever you are.</p>
+      <div class="button-group margin-top-20px">
+        <a href="#coaching-plans" class="cta-button hero-cta">See All Coaching Plans</a>
       </div>
-    </article>
+    </div>
   </section>
 
   <section id="is-this-you">
@@ -103,19 +116,19 @@
               <tbody>
                 <tr>
                   <td class="padding-8px-4px"><a href="https://www.trainerize.me/profile/busybodyzpersonalfitness/?planGUID=7d056c904c594cb58a72b7579ce56904" class="plan-link">Reset & Go</a></td>
-                  <td class="padding-8px-4px">1x 30-min/month</td>
+                  <td class="padding-8px-4px">1x 20-min/month</td>
                   <td class="padding-8px-4px">Light guidance, full program access</td>
                   <td class="padding-8px-4px">$139/month</td>
                 </tr>
                 <tr>
                   <td class="padding-8px-4px"><a href="https://www.trainerize.me/profile/busybodyzpersonalfitness/?planGUID=8e80b7ea8d364d5098dca2cce896f06a&mode=checkout" class="plan-link">Momentum Builder</a></td>
-                  <td class="padding-8px-4px">2x 30-min/month</td>
+                  <td class="padding-8px-4px">2x 20-min/month</td>
                   <td class="padding-8px-4px">Deeper accountability & tweaks</td>
                   <td class="padding-8px-4px">$189/month</td>
                 </tr>
                 <tr>
                   <td class="padding-8px-4px"><a href="https://www.trainerize.me/profile/busybodyzpersonalfitness/?planGUID=3fd31cd09e4f4b7a939fefff8176d4a8&mode=checkout" class="plan-link">Total Accountability</a></td>
-                  <td class="padding-8px-4px">4x 20-min (or 2x 40min)</td>
+                  <td class="padding-8px-4px">4x 20-min/month</td>
                   <td class="padding-8px-4px">Highest support, weekly coaching pulse</td>
                   <td class="padding-8px-4px">$249/month</td>
                 </tr>
@@ -167,7 +180,7 @@
           <p>Get the accountability you need, with a coach who gets your lifestyle.</p>
           <p>Let's create a plan that works for you.</p>
           <div class="button-group">
-            <a href="booking.html" class="cta-button">Start My Coaching Plan</a>
+            <a href="#coaching-plans" class="cta-button">Choose Your Coaching Plan</a>
           </div>
         </div>
       </div>
@@ -213,5 +226,8 @@ dateInput2.addEventListener('change', () => {
 });
 </script>
 
+<script src="scripts/nav-menu.js"></script>
+
 </body>
+
 </html>

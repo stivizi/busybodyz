@@ -266,6 +266,19 @@ h1, h2, h3 {
     max-width: 680px;
     margin: 0 auto;
   }
+#menu-toggle {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  padding: 5px;
+}
+
+/* Adjust button positions in mobile view */
+.cards .card:nth-child(1) .btn {
+  margin-left: -0.5in;
+}
+.cards .card:nth-child(2) .btn {
+  margin-left: 0.25in;
+}
 }
 
 /* Styles for screens 1024px and wider (Desktop) */
@@ -383,13 +396,13 @@ h1, h2, h3 {
     align-content: center;
     justify-content: center;
     align-items: center;
-    ?background-color: #ffffff5e;
+    background-color: rgba(255, 255, 255, 0.37);
     padding: 0.5em;
     margin-top: 2em;
     width: fit-content;
     border: solid 1px;
     border-radius: 3px;
-}
+  }
 
   a.btn.learn-more {
     text-decoration: none;

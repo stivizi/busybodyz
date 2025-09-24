@@ -20,32 +20,48 @@
 
 </head>
 <body class="page-virtual-coaching">
-
-    <header>
-      <main>
-        <div class="site-header-content">
-          <div class="header-logo-container">
-            <img
-              src="https://static.wixstatic.com/media/5ccc19_5312822ae08e485b8be8a3e3c572dca8~mv2.png"
-              alt="BusyBodyz Icon"
-            />
-          </div>
-          <nav aria-label="Main navigation">
-            <a href="index.html" aria-current="page" class="site-header__nav-link">Home</a>
-            <a href="about.html" class="site-header__nav-link">About</a>
-          </nav>
-        </div>
-      </main>
-    </header>
+<header>
+  <div class="header">
+    <a href="index.html" class="logo-link">
+      <div class="logo-container">
+        <img src="busybodyzlogo.png" alt="BusyBodyz Logo" class="header-logo">
+        <h2 class="header-title"><span class="brand-name">BusyBodyz</span> Fitness Coaching</h2>
+      </div>
+    </a>
+    <div id="menu-toggle" class="P4my70" aria-label="Toggle menu">
+      <div class="baZw44">
+        <span class="T8_LA1 HZW1lN"></span>
+        <span class="T8_LA1 dbDvn7"></span>
+        <span class="T8_LA1 iu4m2t"></span>
+      </div>
+    </div>
+    <a href="booking.html" class="header-cta">Talk With<br>A Coach</a>
+    <nav class="nav">
+       <div class="nav-content">
+         <button id="close-menu" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 24px; color: #333;">&times;</button>
+         <div class="nav-links">
+           <a href="index.html#services" class="nav-link">Coaching Services</a>
+           <a href="self-led-2.html" class="nav-link">Self Led</a>
+           <a href="online-coaching.html" class="nav-link">Online Coaching</a>
+           <a href="virtual-coaching.html" class="nav-link">Virtual Coaching</a>
+           <a href="about.html" class="nav-link">About Us</a>
+           <a href="quiz.html" class="nav-link">Energy Reset Quiz</a>
+           <a href="booking.html" class="nav-link">Book Consultation</a>
+         </div>
+       </div>
+     </nav>
+  </div>
+</header>
 
 <main>
-  <section>
+  <section class="hero">
+    <h2 class="hero-subtitle-top-left">Virtual Coaching</h2>
+    <img src="healthy_woman_phone.webp" alt="Healthy woman on phone" />
     <article>
       <div class="align">
         <p>Live, guided workouts and personalized support—wherever you are. All the structure of in-person training, designed to fit your space and schedule.</p>
         <div class="button-group margin-top-20px">
-          <a href="booking.html" class="cta-button">Book a Virtual Session</a>
-          <a href="#coaching-packages" class="secondary-button">Choose a Coaching Package</a>
+          <a href="#coaching-packages" class="cta-button">View Coaching Plans</a>
         </div>
       </div>
     </article>
@@ -99,20 +115,20 @@
               <tbody>
                 <tr>
                   <td>Starter</td>
-                  <td>1x/week</td>
-                  <td>Weekly live session + full app access</td>
-                  <td>$320/month</td>
+                  <td>12</td>
+                  <td>Weekly 12 live session + full app access</td>
+                  <td>$960</td>
                 </tr>
                 <tr>
                   <td>Momentum</td>
-                  <td>2x/week</td>
-                  <td>Two weekly sessions + coaching support</td>
-                  <td>$600/month</td>
+                  <td>24</td>
+                  <td>24 live sessions + full app support</td>
+                  <td>$1800</td>
                 </tr>
                 <tr>
                   <td>Drop-In</td>
                   <td>As needed</td>
-                  <td>One-time 45-min session</td>
+                  <td>One-time 55-min session</td>
                   <td>$90/session</td>
                 </tr>
               </tbody>
@@ -175,8 +191,7 @@
           <h2>Let's Get You Moving Again—Together</h2>
           <p>The structure you need. The support you want. The results you've been waiting for.</p>
           <div class="button-group">
-            <a href="booking.html" class="cta-button">Book Your First Session</a>
-            <a href="#coaching-packages" class="secondary-button">Explore Packages</a>
+            <a href="#coaching-packages" class="cta-button">Choose Your Plan</a>
           </div>
         </div>
       </div>
@@ -222,5 +237,8 @@ dateInput2.addEventListener('change', () => {
 });
 </script>
 
+<script src="scripts/nav-menu.js"></script>
+
 </body>
+
 </html>

@@ -23,22 +23,38 @@
 </head>
 <body>
 
-    <header>
-      <main>
-        <div class="site-header-content">
-          <div class="header-logo-container">
-            <img
-              src="https://static.wixstatic.com/media/5ccc19_5312822ae08e485b8be8a3e3c572dca8~mv2.png"
-              alt="BusyBodyz Icon"
-            />
-          </div>
-          <nav aria-label="Main navigation">
-            <a href="index.html" aria-current="page" class="site-header__nav-link">Home</a>
-            <a href="about.html" class="site-header__nav-link">About</a>
-          </nav>
-        </div>
-      </main>
-    </header>
+<header>
+  <div class="header">
+    <a href="index.html" class="logo-link">
+      <div class="logo-container">
+        <img src="busybodyzlogo.png" alt="BusyBodyz Logo" class="header-logo">
+        <h2 class="header-title"><span class="brand-name">BusyBodyz</span> Fitness Coaching</h2>
+      </div>
+    </a>
+    <div id="menu-toggle" class="P4my70" aria-label="Toggle menu">
+      <div class="baZw44">
+        <span class="T8_LA1 HZW1lN"></span>
+        <span class="T8_LA1 dbDvn7"></span>
+        <span class="T8_LA1 iu4m2t"></span>
+      </div>
+    </div>
+    <a href="booking.html" class="header-cta">Talk With<br>A Coach</a>
+    <nav class="nav">
+       <div class="nav-content">
+         <button id="close-menu" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 24px; color: #333;">&times;</button>
+         <div class="nav-links">
+           <a href="index.html#services" class="nav-link">Coaching Services</a>
+           <a href="self-led-2.html" class="nav-link">Self Led</a>
+           <a href="online-coaching.html" class="nav-link">Online Coaching</a>
+           <a href="virtual-coaching.html" class="nav-link">Virtual Coaching</a>
+           <a href="about.html" class="nav-link">About Us</a>
+           <a href="quiz.html" class="nav-link">Energy Reset Quiz</a>
+           <a href="booking.html" class="nav-link">Book Consultation</a>
+         </div>
+       </div>
+     </nav>
+  </div>
+</header>
 
 <main>
   <section id="about-content">
@@ -68,6 +84,8 @@
 <footer>
   <p>&copy; 2025 BusyBodyz. All rights reserved.</p>
 </footer>
+
+<script src="scripts/nav-menu.js"></script>
 
 </body>
 </html>

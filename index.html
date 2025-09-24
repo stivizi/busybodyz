@@ -247,59 +247,77 @@
 <body>
 
   <header>
-    <div class="header">
-     
-      <nav class="mobile">
-        <h1>Reset your energy</h1>
-        <h2>Transform your life</h2>
-        <div class="nav-links">
-          <a href="#home" class="nav-link">Logo</a>
-          <a href="#news" class="nav-link">News</a>
-          <a href="#contact" class="nav-link">Contact</a>
-          <a href="#about" class="nav-link">About</a>
-          <div class="button learn-more-header">
-              <img src="css_modules/images/eye_white.svg" alt="Busybodyz Icon" loading="lazy" class="eye">
-              <a href="#learn-more" class="btn learn-more">Learn More</a>
-            </div>
+      <div class="header">
+        <a href="index.html" class="logo-link">
+          <div class="logo-container">
+            <img src="busybodyzlogo.png" alt="BusyBodyz Logo" class="header-logo">
+            <h2 class="header-title"><span class="brand-name">BusyBodyz</span> Fitness Coaching</h2>
+          </div>
+        </a>
+        <a href="quiz.html" class="cta-button-small quiz-button">Take<br>the<br>Quiz</a>
+        <div id="menu-toggle" class="P4my70" aria-label="Toggle menu">
+          <div class="baZw44">
+            <span class="T8_LA1 HZW1lN"></span>
+            <span class="T8_LA1 dbDvn7"></span>
+            <span class="T8_LA1 iu4m2t"></span>
+          </div>
         </div>
-      </nav>
-      <nav class="desktop">
-        <div class="nav-links">
-          <a href="#home" class="nav-link">Logo</a>
-          <a href="#news" class="nav-link">News</a>
-          <a href="#contact" class="nav-link">Contact</a>
-          <a href="#about" class="nav-link">About</a>
-          
-        </div>
-      </nav>
-    </div>
-  </header>
+        <span class="header-cta">Talk With<br>A Coach</span>
+        <nav class="nav">
+           <div class="nav-content">
+             <button id="close-menu" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 24px; color: #333;">&times;</button>
+             <div class="nav-links">
+               <a href="#services" class="nav-link">Coaching Services</a>
+               <a href="self-led-2.html" class="nav-link">Self Led</a>
+               <a href="online-coaching.html" class="nav-link">Online Coaching</a>
+               <a href="virtual-coaching.html" class="nav-link">Virtual Coaching</a>
+               <a href="about.html" class="nav-link">About Us</a>
+               <a href="quiz.html" class="nav-link">Energy Reset Quiz</a>
+               <a href="booking.html" class="nav-link">Book Consultation</a>
+             </div>
+           </div>
+         </nav>
+      </div>
+    </header>
 
   <main>
 
-    <section id="learn-more" class="section hero hero">
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2 class="hero-top-text">Fitness for Everyday People</h2>
+        <h1 class="hero-title">Reset Your Energy.<br>Transform Your Life.</h1>
+        <p class="hero-subtitle">Feeling drained, stuck, or low on energy? Discover what’s holding you back and take the first step toward lasting change.</p>
+        <div class="hero-cta-container">
+          <a href="#services" class="btn btn-primary">View Coaching Services</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section journey-intro">
       <div class="container">
         <article class="content">
-          <div class="lottie-container">
-            <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-              type="module"></script>
-            <dotlottie-player src="https://lottie.host/19f19132-3592-4ea0-885d-32254c00fb6b/V2YxyC6WIT.lottie"
-              background="transparent" speed="1" loop=""
-              autoplay=""></dotlottie-player>
-          </div>
-          <h2>Reset Your Energy</h2>
-          <p>At BusyBodyz, we help busy people like you build simple, sustainable habits to feel energized, strong, and
-            balanced – without the overwhelm.</p>
-          <p>Discover your personalized energy blueprint in just 2 minutes and get a tailored plan that fits your unique
-            lifestyle.</p>
-          <!-- Assuming a button or link is desired here based on template structure -->
-          <!-- <a href="#contact-form"><button class="btn">Request a Quote</button></a> -->
-               <div class="button learn-more">
-              <img src="css_modules/images/eye_white.svg" alt="Busybodyz Icon" loading="lazy" class="eye">
-              <a href="#drained" class="btn learn-more">Learn More</a>
+          <h2>Choose Your Path</h2>
+          <div class="cards">
+            <div class="card">
+              <div class="card-icon">📝</div>
+              <h3>Take the Energy Reset Quiz</h3>
+              <p>Get a snapshot of your current energy, habits, and challenges in just a few minutes. You’ll walk away with clarity on where to start and how coaching can help you.</p>
+              <a href="quiz.html" class="btn btn-primary">Take the Quiz</a>
             </div>
+            <div class="card">
+              <div class="card-icon">💬</div>
+              <h3>Talk With a Coach</h3>
+              <p>Prefer a personal conversation? Book a one-on-one session with a coach who will listen, guide, and help you map out the best next step for your goals.</p>
+              <a href="booking.html" class="btn btn-primary">Book a Consult</a>
+            </div>
+            <div class="card">
+              <div class="card-icon">📈</div>
+              <h3>Explore Coaching Plans</h3>
+              <p>Ready to dive in? Explore flexible self-led and guided coaching programs designed to fit your lifestyle and help you reset your energy at your own pace.</p>
+              <a href="#services" class="btn btn-primary">View Plans</a>
+            </div>
+          </div>
         </article>
-
       </div>
     </section>
 
@@ -526,16 +544,12 @@
                 <p>BusyBodyz is for real people living real lives. No
                 extremes. No guilt. Just steady, lasting progress.</p>
               </li>
-              <li class="checklist-item">
-                <img src="check_mark.png" alt="Check mark" class="checklist-icon"><h3>Judgment-Free Zone</h3>
-                <p>BusyBodyz is for real people living real lives. No
-                extremes. No guilt. Just steady, lasting progress.</p>
-              </li>
             </ul>
             <p>Ready to reset your energy and build the momentum you’ve been looking for?</p>
             <p>Let’s get started — your best self is already within you.</p>
-            <!-- Assuming a button or link is desired here based on template structure -->
-            <!-- <a href="#contact-form"><button class="btn">Request a Quote</button></a> -->
+            <div style="text-align: center; margin-top: 20px;">
+              <a href="#services" class="btn btn-primary">View Plans</a>
+            </div>
           </div>
         </article>
       </div>
@@ -631,7 +645,7 @@
       </div>
     </section>
 
-    <section class="section services">
+    <section id="services" class="section services">
       <div class="container">
         <article class="content">
           <h2>Choose Your Energy Reset Path</h2>
@@ -642,7 +656,7 @@
             <li class="card">
               <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 <dotlottie-player src="https://lottie.host/b7d77d78-d531-4ddb-8fb3-f1cdbb2add69/SaShqUnOYn.lottie" background="transparent" speed="1"  loop autoplay></dotlottie-player>
-              <h3>Self-Led Plan</h3>
+              <h3><a href="self-led-2.html">Self-Led Plan</a></h3>
               <p>Flexible. On your time. On your terms. Get a guided plan you can follow at your own pace--perfect if
                 you want structure without check-ins.</p>
               <!-- Assuming a button or link is desired here based on template structure -->
@@ -652,7 +666,7 @@
               <!-- Online Coaching icon (Laptop with Person) -->
              <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 <dotlottie-player src="https://lottie.host/3c086089-b4dc-4806-b62c-0788ddfe45c4/c3aP7jYQjc.lottie" background="transparent" speed="1"  loop autoplay></dotlottie-player>
-              <h3>Online Coaching</h3>
+              <h3><a href="online-coaching.html">Online Coaching</a></h3>
               <p>Personalized. Supportive. Adaptable. Work with a coach to create a customized Energy Reset plan, with
                 check-ins to keep you aligned, focused, and progressing.</p>
               <!-- Assuming a button or link is desired here based on template structure -->
@@ -662,7 +676,7 @@
               <!-- Virtual Coaching icon (Person) -->
               <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 <dotlottie-player src="https://lottie.host/501657ef-615f-4977-8e3d-71a4cc896d0d/CRkSntZie9.lottie" background="transparent" speed="1"  loop autoplay></dotlottie-player>
-              <h3>Virtual Coaching</h3>
+              <h3><a href="virtual-coaching.html">Virtual Coaching</a></h3>
               <p>Live. Interactive. Hands-On. Join virtual training sessions and real-time coaching to stay energized,
                 accountable, and inspired from wherever you are.</p>
               <!-- Assuming a button or link is desired here based on template structure -->
@@ -713,7 +727,10 @@
         <article class="content">
           <h2>Ready to Find Your Starting Point?</h2>
           <p>Stop guessing and start understanding what your body needs. Take our quick quiz to get personalized
-            insights and discover the first steps towards sustainable energy and well-being.</p>
+          insights and discover the first steps towards sustainable energy and well-being.</p>
+          <div style="text-align: center; margin-top: 20px;">
+            <a href="#services" class="btn btn-primary">View Plans</a>
+          </div>
         </article>
       </div>
     </section>
@@ -1012,6 +1029,7 @@
         const duration = 3000;
         const animationEnd = Date.now() + duration;
 
+<<<<<<< HEAD
         const frame = () => {
           const timeLeft = animationEnd - Date.now();
 
@@ -1024,6 +1042,9 @@
             origin: { x: 0 },
             colors: ['#ff5722', '#ff9800', '#4caf50', '#2196f3', '#9c27b0']
           });
+=======
+  <script src="scripts/nav-menu.js"></script>
+>>>>>>> 39d21ee (update all website files)
 
           confetti({
             particleCount: 2,

@@ -21,17 +21,54 @@
 </head>
 <body>
 
-    <header class="quiz">
-            <a href="index.html" aria-current="page" class="site-header__nav-link">Back to Home</a>
-        
-    </header>
+<header>
+ <div class="header">
+   <a href="index.html" class="logo-link">
+     <div class="logo-container">
+       <img src="busybodyzlogo.png" alt="BusyBodyz Logo" class="header-logo">
+       <h2 class="header-title"><span class="brand-name">BusyBodyz</span> Fitness Coaching</h2>
+     </div>
+   </a>
+   <div id="menu-toggle" class="P4my70" aria-label="Toggle menu">
+     <div class="baZw44">
+       <span class="T8_LA1 HZW1lN"></span>
+       <span class="T8_LA1 dbDvn7"></span>
+       <span class="T8_LA1 iu4m2t"></span>
+     </div>
+   </div>
+   <a href="booking.html" class="header-cta">Talk With<br>A Coach</a>
+   <nav class="nav">
+      <div class="nav-content">
+        <button id="close-menu" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 24px; color: #333;">&times;</button>
+        <div class="nav-links">
+          <a href="index.html#services" class="nav-link">Coaching Services</a>
+          <a href="self-led-2.html" class="nav-link">Self Led</a>
+          <a href="online-coaching.html" class="nav-link">Online Coaching</a>
+          <a href="virtual-coaching.html" class="nav-link">Virtual Coaching</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="quiz.html" class="nav-link">Energy Reset Quiz</a>
+          <a href="booking.html" class="nav-link">Book Consultation</a>
+        </div>
+      </div>
+    </nav>
+ </div>
+</header>
 
 <main>
   <section id="quiz">
     <article>
       <div class="align">
+        <div class="quiz-intro">
+          <h1>Energy Reset Quiz</h1>
+          <p>Welcome to your personal wellness assessment! This quick 21-question quiz will evaluate your current habits across key areas of health: sleep, nutrition, stress management, and physical activity.</p>
+          <p>Based on your responses, you'll receive a comprehensive personalized Energy Reset Plan with actionable insights and recommendations to boost your energy, improve your well-being, and achieve your health goals.</p>
+          <p>Ready to discover your wellness blueprint? Let's get started!</p>
+        </div>
         <div id="countdown-offer" class="countdown-offer">
           Limited Time Offer: Free Personalized Plan ends in <span id="countdown-timer">24:00:00</span>
+        </div>
+        <div style="text-align: center; margin: 20px 0;">
+          <button id="random-answer-btn" class="secondary-button" onclick="randomizeAndGenerate()">Randomly Answer All Questions</button>
         </div>
         <div id="quiz-container"></div>
         <div id="progress-container" class="progress-container">
@@ -46,21 +83,7 @@
           <button id="submit-btn" class="secondary-button quiz-submit-button">Submit</button>
         </div>
         <div id="result" class="quiz-result">
-          <div class="quiz-result-header">
-            <h3 class="quiz-result-heading">Congratulations!</h3>
-            <p>You've completed the quiz. Check your email for your personalized Energy Reset Plan and a special bonus!</p>
-          </div>
-          
           <!-- The quiz summary will be inserted here by JavaScript -->
-          
-          <div class="quiz-share-section">
-            <p>Share with friends to unlock an extra bonus guide!</p>
-            <div class="quiz-share-buttons">
-              <a href="#" class="secondary-button quiz-share-button">Share on Facebook</a>
-              <a href="#" class="secondary-button quiz-share-button">Share on Twitter</a>
-              <a href="#" class="secondary-button quiz-share-button">Copy Link</a>
-            </div>
-          </div>
         </div>
         <script src="scripts/quiz-logic.js"></script>
       </div>

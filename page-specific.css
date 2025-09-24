@@ -15,9 +15,7 @@
 
 /* Page-specific header backgrounds */
 .page-self-led header {
-  /* Use the specific client image for this page */
-  background: url(gail.jpg) no-repeat center center;
-  background-size: cover;
+  /* Use the same background as homepage */
 }
 
 /* Styles extracted from inline styles in booking.html */
@@ -219,13 +217,31 @@ header.hybrid-coaching-header { /* Added a class for this specific header */
 /* Styles extracted from inline styles in online-coaching.html */
 header.online-coaching-header { /* Added a class for this specific header */
   position: relative;
-  background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80') no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  padding: 30px 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.online-coaching-page .hero-section {
+  position: relative;
+  background: url('css_modules/images/plankgirl.avif') no-repeat center center;
   background-size: cover;
   padding: 30px 20px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
   border-radius: 8px;
   margin-bottom: 20px;
+  height: 2in;
+}
+
+.hero-section > article { /* Targeting the inner article to add overlay if needed */
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
 }
 
 header.online-coaching-header > div:first-child { /* Targeting the inner div with background-color, padding, etc. */
@@ -294,4 +310,170 @@ header.online-coaching-header .header-icon-container lord-icon {
   width: 90%;
   text-align: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Feature Comparison Table Styling */
+.feature-table-container {
+  overflow-x: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.feature-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 0.95em; /* Smaller base font size */
+}
+
+.feature-table th,
+.feature-table td {
+  padding: 15px 12px; /* More padding for better spacing */
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+.feature-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  line-height: 1.4;
+}
+
+.feature-table th:first-child {
+  text-align: left;
+  background-color: #e9ecef;
+  color: #212529;
+}
+
+.feature-table td:first-child {
+  font-weight: 500;
+  color: #495057;
+}
+
+.feature-table tr:nth-child(even) {
+  background-color: #fdfdfd;
+}
+
+.feature-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.feature-table th br {
+  display: block;
+  margin-bottom: 4px; /* Space between icon/text and price */
+}
+
+.feature-table th .icon {
+  font-size: 1.5em; /* Adjust icon size if needed */
+  margin-bottom: 5px;
+  display: block;
+}
+
+.feature-table td {
+  color: #6c757d;
+}
+
+.feature-table td .check-mark {
+  color: #28a745; /* Green for check marks */
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.feature-table td .dash {
+  color: #dc3545; /* Red for dashes */
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .feature-table {
+    font-size: 0.85em;
+  }
+
+  .feature-table th,
+  .feature-table td {
+    padding: 10px 8px;
+  }
+}
+
+.feature-table th a {
+  transition: color 0.3s ease;
+}
+
+.feature-table th a:hover {
+  color: #0056b3; /* A slightly darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Reduce font size in online coaching plans table for check-ins and support level columns */
+.online-coaching-page .pricing-table td:nth-child(2),
+.online-coaching-page .pricing-table td:nth-child(3) {
+  font-size: calc(10px + 0.5vw);
+}
+
+/* Style for hero section button on online coaching page */
+.online-coaching-page .hero-section .hero-cta {
+  margin-top: 20px;
+  width: auto;
+  display: inline-block;
+}
+
+/* Hero section styling for self-led page */
+.page-self-led .hero {
+  position: relative;
+  text-align: center;
+  padding: 60px 0;
+  width: 100%;
+  margin: 0 auto 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-self-led .hero img {
+  height: 2in;
+  width: 100%;
+}
+
+.page-self-led .hero .online-coaching-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.page-self-led .hero:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.page-self-led .hero img {
+  height: 2in;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.page-self-led .hero .hero-cta {
+  margin-top: 20px;
+  width: auto;
+  display: inline-block;
 }
